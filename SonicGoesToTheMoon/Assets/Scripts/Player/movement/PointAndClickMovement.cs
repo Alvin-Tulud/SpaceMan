@@ -19,7 +19,7 @@ public class PointAndClickMovement : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {   
+        {
             // Get clicked on location in world space ...
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = transform.position.z;
