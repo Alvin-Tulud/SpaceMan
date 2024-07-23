@@ -23,6 +23,8 @@ public class ClickInteract : MonoBehaviour
             FindAnyObjectByType<AIPath>().canMove = false;
 
             GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
