@@ -7,18 +7,21 @@ public class PointAndClickMovement : MonoBehaviour
 {
     public AIDestinationSetter destinationSystem;
     private GameObject destinationPointer;
+    private bool canMove;
 
     // Start is called before the first frame update
     void Start()
     {
         destinationPointer = new GameObject("destinationPointer");
         destinationPointer.transform.position = transform.position;
+
+        canMove = true;
     }
 
    
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canMove)
         {
             // Get clicked on location in world space ...
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -32,5 +35,10 @@ public class PointAndClickMovement : MonoBehaviour
             Debug.Log("Moving to " + mousePosition.x + "," + mousePosition.y);
 
         }
+    }
+
+    public void setCanMove(bool canMove)
+    {
+        this.canMove = canMove;
     }
 }

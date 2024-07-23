@@ -21,11 +21,9 @@ public class ClickInteract : MonoBehaviour
         if (interactbox.OverlapPoint(mousePos) && Input.GetMouseButtonDown(0))
         {
             //stop player movement and enable the dialogue box
-            FindAnyObjectByType<AIPath>().canMove = false;
+            FindAnyObjectByType<PointAndClickMovement>().setCanMove(false);
 
             GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(true);
-
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
