@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5217693407798980017}
   - component: {fileID: 2651728146465637723}
   - component: {fileID: 8293406485610537603}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Npc
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.4184711}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -163,7 +163,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.16305777}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &8293406485610537603
 MonoBehaviour:
