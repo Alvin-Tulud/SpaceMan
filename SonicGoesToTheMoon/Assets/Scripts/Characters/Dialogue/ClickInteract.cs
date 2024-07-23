@@ -17,6 +17,7 @@ public class ClickInteract : MonoBehaviour
     void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         if (interactbox.OverlapPoint(mousePos) && Input.GetMouseButtonDown(0))
         {
             //stop player movement and enable the dialogue box
