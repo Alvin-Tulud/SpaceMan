@@ -1,8 +1,10 @@
 using Ink.Runtime;
+using NUnit.Framework.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoDialogue : MonoBehaviour
 {
@@ -10,7 +12,10 @@ public class DoDialogue : MonoBehaviour
     private Story dialogue;
     private TextMeshProUGUI dialogueTextBox;
 
+    private Button button;
+
     public bool needInteract;
+    private bool hasReq;
     private bool isPlaying;
     // Start is called before the first frame update
     void Awake()
@@ -18,21 +23,25 @@ public class DoDialogue : MonoBehaviour
         dialogue = new Story(inkAsset.text);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        tellStory();
-    }
-
     public void setTextBox(TextMeshProUGUI text)
     {
         dialogueTextBox = text;
     }
 
-    private void tellStory()
+    public void tellStory()
     {
         if(dialogue.canContinue)
         {
+            if (hasReq)
+            {
+                var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
+            }
+            else
+            {
+                var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
+            }
+
+
             string text = dialogue.Continue();
             // This removes any white space from the text.
             text = text.Trim();
