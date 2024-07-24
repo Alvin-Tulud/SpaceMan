@@ -769,6 +769,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3323212574395866711, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851333105283176274, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_TagString
+      value: DialogueText
+      objectReference: {fileID: 0}
     - target: {fileID: 7095854455400711016, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_text
       value: Nobara
