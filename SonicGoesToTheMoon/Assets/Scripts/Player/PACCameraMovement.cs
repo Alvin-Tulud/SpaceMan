@@ -9,9 +9,9 @@ public class PACCameraMovement : MonoBehaviour
 {
     // For moving with the player
     private GameObject player;
-    public float speed;
 
     // For keeping within the bounds of the game
+    private Bounds floorBounds;
     private Bounds cameraBounds;
     public Camera playerCamera;
 
@@ -21,16 +21,16 @@ public class PACCameraMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         // Setup for the boundaries for the Camera
-        var boundaries = GameObject.FindGameObjectWithTag("Floor").GetComponent<SpriteRenderer>().bounds;
+        floorBounds = GameObject.FindGameObjectWithTag("ProperFloor").GetComponent<SpriteRenderer>().bounds;
 
         var height = playerCamera.orthographicSize;
         var width = height * playerCamera.aspect;
 
-        var minX = boundaries.min.x + (width / 2);
-        var maxX = boundaries.max.x - (width / 2);
+        var minX = floorBounds.min.x + width;
+        var maxX = floorBounds.max.x - width;
 
-        var minY = boundaries.min.x + (height / 2);
-        var maxY = boundaries.max.y - (height / 2);
+        var minY = floorBounds.min.y + height;
+        var maxY = floorBounds.max.y - height;
 
         cameraBounds = new Bounds();
 
@@ -38,21 +38,31 @@ public class PACCameraMovement : MonoBehaviour
             new Vector3(minX, minY, 0.0f),
             new Vector3(maxX, maxY, 0.0f)
         );
-
-        // Debug for the boundaries
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(cameraBounds.min, cameraBounds.max);
     }
 
 
     void LateUpdate()
     {
-        // var targetPosition = getWithinBounds(player.transform.position);
+        // Set new location within the bounds of the game
+        var targetPosition = getWithinBounds(player.transform.position);
 
-        var targetPosition = player.transform.position;
-        targetPosition.z = -10;
+        // Backup Code to follow the player
+        //var targetPosition = player.transform.position;
+        //targetPosition.z = -10;
 
         transform.position = targetPosition;
+
+        // Debug for the boundaries
+        /*Debug.DrawLine(floorBounds.center, new Vector3(floorBounds.min.x, floorBounds.min.y,0), Color.blue);
+        Debug.DrawLine(floorBounds.center, new Vector3(floorBounds.min.x, floorBounds.max.y, 0), Color.blue);
+        Debug.DrawLine(floorBounds.center, new Vector3(floorBounds.max.x, floorBounds.min.y, 0), Color.blue);
+        Debug.DrawLine(floorBounds.center, new Vector3(floorBounds.max.x, floorBounds.max.y, 0), Color.blue);
+
+        Debug.DrawLine(cameraBounds.center, new Vector3(cameraBounds.min.x, cameraBounds.min.y, 0), Color.red);
+        Debug.DrawLine(cameraBounds.center, new Vector3(cameraBounds.min.x, cameraBounds.max.y, 0), Color.red);
+        Debug.DrawLine(cameraBounds.center, new Vector3(cameraBounds.max.x, cameraBounds.min.y, 0), Color.red);
+        Debug.DrawLine(cameraBounds.center, new Vector3(cameraBounds.max.x, cameraBounds.max.y, 0), Color.red);*/
+        
     }
 
     private Vector3 getWithinBounds(Vector3 positionInGame)
