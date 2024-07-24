@@ -16,7 +16,6 @@ public class DoDialogue : MonoBehaviour
     void Awake()
     {
         dialogue = new Story(inkAsset.text);
-        isPlaying = false;
     }
 
     // Update is called once per frame
@@ -34,8 +33,6 @@ public class DoDialogue : MonoBehaviour
     {
         if(dialogue.canContinue)
         {
-            isPlaying = true;
-
             string text = dialogue.Continue();
             // This removes any white space from the text.
             text = text.Trim();
@@ -43,6 +40,4 @@ public class DoDialogue : MonoBehaviour
             dialogueTextBox.text = text;
         }
     }
-
-    public bool getIsPlaying() { return isPlaying; }
 }

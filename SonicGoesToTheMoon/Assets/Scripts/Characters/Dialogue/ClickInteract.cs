@@ -22,21 +22,21 @@ public class ClickInteract : MonoBehaviour
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (interactbox.OverlapPoint(mousePos) && Input.GetMouseButtonDown(0))
+        if (interactbox.OverlapPoint(mousePos))
         {
             //stop player movement and enable the dialogue box
             FindAnyObjectByType<PointAndClickMovement>().setCanMove(false);
 
-            GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(true);
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(true);
 
-            dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>());
+                dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>());
+            }
         }
-
-        if (!dialogue.getIsPlaying())
-        {
-            FindAnyObjectByType<PointAndClickMovement>().setCanMove(true);
-
-            GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(false);
-        }
+        //else
+        //{
+        //    FindAnyObjectByType<PointAndClickMovement>().setCanMove(false);
+        //}
     }
 }
