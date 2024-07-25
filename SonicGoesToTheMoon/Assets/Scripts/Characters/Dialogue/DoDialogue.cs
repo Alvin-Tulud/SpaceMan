@@ -21,17 +21,24 @@ public class DoDialogue : MonoBehaviour
     void Awake()
     {
         dialogue = new Story(inkAsset.text);
+
+        isPlaying = false;
     }
 
     public void setTextBox(TextMeshProUGUI text)
     {
         dialogueTextBox = text;
+
+        dialogue.ResetState();
     }
 
     public void tellStory()
     {
         if(dialogue.canContinue)
         {
+            //Debug.Log("play");
+            isPlaying = true;
+
             if (hasReq)
             {
                 var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
@@ -48,7 +55,16 @@ public class DoDialogue : MonoBehaviour
             // Display the text on screen!
             dialogueTextBox.text = text;
         }
+        else
+        {
+            //Debug.Log("done");
+            isPlaying = false;
+        }
     }
 
     public void setHasReq(bool hasReq) { this.hasReq = hasReq; }
+
+    public bool getIsPlaying() { return isPlaying; }
+
+    public void setIsPlaying(bool isPlaying) { this.isPlaying = isPlaying; }
 }

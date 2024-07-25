@@ -39,7 +39,7 @@ public class PointAndClickMovement : MonoBehaviour
 
     public void setCanMove(bool canMove)
     {
-        Debug.Log(canMove);
+        //Debug.Log(canMove);
         this.canMove = canMove;
     }
 }

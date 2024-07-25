@@ -11,14 +11,11 @@ public class ClickInteract : MonoBehaviour
     Vector2 mousePos;
 
     DoDialogue dialogue;
-    bool runningdDialogue;
     // Start is called before the first frame update
     void Start()
     {
         interactbox = GetComponent<Collider2D>();
         dialogue = transform.parent.GetComponent<DoDialogue>();
-
-        runningdDialogue = false;
     }
 
     // Update is called once per frame
@@ -34,9 +31,9 @@ public class ClickInteract : MonoBehaviour
             //if player clicks down while hovering the dialogue box start dialogue
             if (Input.GetMouseButtonDown(0))
             {
-                runningdDialogue = true;
-
                 GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(true);
+
+                dialogue.setIsPlaying(true);
 
                 dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>());
 
@@ -44,9 +41,17 @@ public class ClickInteract : MonoBehaviour
             }
         }
         //turn movement back on when they arent hovering and dialogue isnt playing
-        else if (!interactbox.OverlapPoint(mousePos) && !runningdDialogue)
+        if (!dialogue.getIsPlaying())
         {
-            FindAnyObjectByType<PointAndClickMovement>().setCanMove(true);
+            //Debug.Log("not playing");
+            interactDone();
         }
+    }
+
+    public void interactDone()
+    {
+        FindAnyObjectByType<PointAndClickMovement>().setCanMove(true);
+
+        GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(false);
     }
 }
