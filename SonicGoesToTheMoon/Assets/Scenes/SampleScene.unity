@@ -476,6 +476,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 676200979557755617, guid: feca598211b83da4b9085ed3009640ef, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2533359294630784378, guid: feca598211b83da4b9085ed3009640ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -537,6 +541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 346447421060485976, guid: 1cdf392b07e70584291204159a51d729, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1738080900491403933, guid: 1cdf392b07e70584291204159a51d729, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -743,6 +751,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3948324508541669419, guid: 53239d5ec8de01f46ac3d351c703953e, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7955434439671915671, guid: 53239d5ec8de01f46ac3d351c703953e, type: 3}
       propertyPath: m_Name
       value: Watermelon
@@ -1151,6 +1163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3356517905658814373, guid: d0fbc2dec39c8f14aa476df1cb894e0d, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3680766803449807026, guid: d0fbc2dec39c8f14aa476df1cb894e0d, type: 3}
       propertyPath: m_Name
       value: Sparkles
@@ -1256,6 +1272,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5695067916540470013, guid: e3ae6170d16ca524695fdabc829f861d, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7228514783754896316, guid: e3ae6170d16ca524695fdabc829f861d, type: 3}
       propertyPath: m_Name
       value: Homejumper
@@ -1317,6 +1337,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5199470206380529537, guid: 26f673c607a0dd745a258e9a3230d077, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1369,14 +1393,6 @@ PrefabInstance:
     - target: {fileID: 5217693407798980017, guid: a8a93696909e8364e9aa074be56e61aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7650415478653747347, guid: a8a93696909e8364e9aa074be56e61aa, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7650415478653747347, guid: a8a93696909e8364e9aa074be56e61aa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7843653539453683893, guid: a8a93696909e8364e9aa074be56e61aa, type: 3}
       propertyPath: m_Name
@@ -1434,6 +1450,10 @@ PrefabInstance:
     - target: {fileID: 865780146901263531, guid: e7f8296a680ba8149a18b7bafd65686a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134557563680900300, guid: e7f8296a680ba8149a18b7bafd65686a, type: 3}
+      propertyPath: inkAsset
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6386256269988579485, guid: e7f8296a680ba8149a18b7bafd65686a, type: 3}
       propertyPath: m_Camera

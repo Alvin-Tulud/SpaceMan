@@ -5,22 +5,38 @@ using UnityEngine.UI;
 
 public class ClickInteract : MonoBehaviour
 {
+    Collider2D col;
     DoDialogue dialogue;
+
+    Vector2 mousePos;
     // Start is called before the first frame update
     void Start()
     {
-        dialogue = transform.parent.parent.GetComponent<DoDialogue>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        col = GetComponent<Collider2D>();
+        dialogue = transform.parent.parent.GetComponent<DoDialogue>();
 
+        if (col.OverlapPoint(mousePos))
+        {
+            FindAnyObjectByType<PointAndClickMovement>().setCanMove(false);
+        }
+        else if (!col.OverlapPoint(mousePos) && !dialogue.getIsPlaying())
+        {
+            FindAnyObjectByType<PointAndClickMovement>().setCanMove(true);
+        }
     }
 
     public IEnumerator interactDone()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
+
+        GameObject.FindWithTag("DialogueBox").transform.GetChild(0).GetComponent<Button>().onClick.RemoveAllListeners();
 
         toggleUIMove(true);
     }
@@ -38,7 +54,7 @@ public class ClickInteract : MonoBehaviour
 
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).GetComponent<Button>().onClick.AddListener(dialogue.tellStory);
 
-        
+        dialogue.tellStory();
     }
 
     private void toggleUIMove(bool can)

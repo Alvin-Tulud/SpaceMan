@@ -31,6 +31,8 @@ public class DoDialogue : MonoBehaviour
     public void setTextBox(TextMeshProUGUI text)
     {
         dialogueTextBox = text;
+
+        dialogue.ResetState();
     }
 
     public void tellStory()
