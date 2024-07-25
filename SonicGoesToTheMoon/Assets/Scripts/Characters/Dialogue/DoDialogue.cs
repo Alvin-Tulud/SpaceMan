@@ -49,4 +49,6 @@ public class DoDialogue : MonoBehaviour
             dialogueTextBox.text = text;
         }
     }
+
+    public void setHasReq(bool hasReq) { this.hasReq = hasReq; }
 }
