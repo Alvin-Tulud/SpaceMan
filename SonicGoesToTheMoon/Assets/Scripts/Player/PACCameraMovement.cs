@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Timeline;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PACCameraMovement : MonoBehaviour
 {
