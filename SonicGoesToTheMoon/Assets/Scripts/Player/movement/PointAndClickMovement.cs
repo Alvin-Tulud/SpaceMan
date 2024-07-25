@@ -33,13 +33,15 @@ public class PointAndClickMovement : MonoBehaviour
             destinationSystem.target = destinationPointer.transform;
 
             // Debug.Log("Moving to " + mousePosition.x + "," + mousePosition.y);
-
         }
     }
 
     public void setCanMove(bool canMove)
     {
-        //Debug.Log(canMove);
+        if (!canMove)
+        {
+            Debug.Log(canMove);
+        }
         this.canMove = canMove;
     }
 }

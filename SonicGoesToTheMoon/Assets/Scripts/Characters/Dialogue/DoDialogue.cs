@@ -11,14 +11,13 @@ public class DoDialogue : MonoBehaviour
     public TextAsset inkAsset;
     private Story dialogue;
     private TextMeshProUGUI dialogueTextBox;
+    private ClickInteract clickInteract;
 
     private Button button;
 
     public bool needInteract;
-    private bool hasReq;
+    public bool hasReq;
     private bool isPlaying;
-
-    string savedJson;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,30 +25,30 @@ public class DoDialogue : MonoBehaviour
 
         isPlaying = false;
 
-        savedJson = dialogue.state.ToJson();
+        clickInteract = transform.GetChild(0).GetChild(0).GetComponent<ClickInteract>();
     }
 
     public void setTextBox(TextMeshProUGUI text)
     {
         dialogueTextBox = text;
-
-        dialogue.state.LoadJson(savedJson);
     }
 
     public void tellStory()
     {
         if(dialogue.canContinue)
         {
-            //Debug.Log("play");
+            Debug.Log("play");
             isPlaying = true;
-
-            if (hasReq)
+            if (needInteract)
             {
-                var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
-            }
-            else
-            {
-                var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
+                if (hasReq)
+                {
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
+                }
+                else
+                {
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
+                }
             }
 
 
@@ -63,6 +62,7 @@ public class DoDialogue : MonoBehaviour
         {
             //Debug.Log("done");
             isPlaying = false;
+            StartCoroutine(clickInteract.interactDone());
         }
     }
 
