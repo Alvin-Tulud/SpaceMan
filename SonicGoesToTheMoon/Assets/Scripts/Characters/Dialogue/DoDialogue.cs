@@ -17,19 +17,23 @@ public class DoDialogue : MonoBehaviour
     public bool needInteract;
     private bool hasReq;
     private bool isPlaying;
+
+    string savedJson;
     // Start is called before the first frame update
     void Awake()
     {
         dialogue = new Story(inkAsset.text);
 
         isPlaying = false;
+
+        savedJson = dialogue.state.ToJson();
     }
 
     public void setTextBox(TextMeshProUGUI text)
     {
         dialogueTextBox = text;
 
-        dialogue.ResetState();
+        dialogue.state.LoadJson(savedJson);
     }
 
     public void tellStory()
