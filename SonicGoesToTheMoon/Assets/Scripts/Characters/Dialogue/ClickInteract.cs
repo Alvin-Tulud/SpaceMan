@@ -21,15 +21,6 @@ public class ClickInteract : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         col = GetComponent<Collider2D>();
         dialogue = transform.parent.parent.GetComponent<DoDialogue>();
-
-        if (col.OverlapPoint(mousePos))
-        {
-            FindAnyObjectByType<PointAndClickMovement>().setCanMove(false);
-        }
-        else if (!col.OverlapPoint(mousePos) && !dialogue.getIsPlaying())
-        {
-            FindAnyObjectByType<PointAndClickMovement>().setCanMove(true);
-        }
     }
 
     public IEnumerator interactDone()
@@ -44,10 +35,7 @@ public class ClickInteract : MonoBehaviour
 
         dialogue.resetDoOnce();
 
-
-
-
-
+        StartCoroutine(stopspam());
     }
 
 
@@ -61,7 +49,7 @@ public class ClickInteract : MonoBehaviour
 
         toggleUIMove(false);
 
-        dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>());
+        dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>(), GameObject.FindWithTag("DialogueName").GetComponent<TextMeshProUGUI>(), GameObject.FindWithTag("DialogueImage").GetComponent<Image>());
 
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).GetComponent<Button>().onClick.AddListener(dialogue.tellStory);
 
@@ -75,5 +63,12 @@ public class ClickInteract : MonoBehaviour
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(!can);
 
         GetComponent<Button>().interactable = can;
+    }
+
+    public IEnumerator stopspam()
+    {
+        GetComponent<Button>().interactable = false;
+        yield return new WaitForSeconds(4f);
+        GetComponent<Button>().interactable = true;
     }
 }
