@@ -36,9 +36,18 @@ public class ClickInteract : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
+        SFX.PlayOneShot("event:/SFX/UI/dialogeClose");
+
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).GetComponent<Button>().onClick.RemoveAllListeners();
 
         toggleUIMove(true);
+
+        dialogue.resetDoOnce();
+
+
+
+
+
     }
 
 
@@ -46,6 +55,8 @@ public class ClickInteract : MonoBehaviour
     public void startdialogue()//button function
     {
         dialogue.setIsPlaying(true);
+
+        SFX.PlayOneShot("event:/SFX/UI/dialogeStart");
         Debug.Log("clicked: " + transform.parent.parent.name);
 
         toggleUIMove(false);

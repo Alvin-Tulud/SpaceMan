@@ -18,6 +18,8 @@ public class DoDialogue : MonoBehaviour
     public bool needInteract;
     public bool hasReq;
     private bool isPlaying;
+    private bool doOnce = true;
+    private int dialogueCounter = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -55,16 +57,29 @@ public class DoDialogue : MonoBehaviour
 
 
             string text = dialogue.Continue();
+
+            
             // This removes any white space from the text.
             text = text.Trim();
             // Display the text on screen!
             dialogueTextBox.text = text;
+            if (dialogueCounter != 0)
+            {
+                SFX.PlayOneShot("event:/SFX/UI/dialogeProgress");
+            }
+            dialogueCounter++;
+
         }
         else
         {
             //Debug.Log("done");
-            isPlaying = false;
-            StartCoroutine(clickInteract.interactDone());
+            isPlaying = false;       
+            if (doOnce)
+            {
+                StartCoroutine(clickInteract.interactDone());
+                doOnce = false;
+                dialogueCounter = 0;
+            }
         }
     }
 
@@ -73,4 +88,10 @@ public class DoDialogue : MonoBehaviour
     public bool getIsPlaying() { return isPlaying; }
 
     public void setIsPlaying(bool isPlaying) { this.isPlaying = isPlaying; }
+
+    //public bool getDoOnce(bool doOnce) { return doOnce; }
+
+    public void resetDoOnce() { doOnce = true; }
+
+
 }
