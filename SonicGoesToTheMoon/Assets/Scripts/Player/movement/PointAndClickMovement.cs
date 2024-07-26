@@ -16,6 +16,7 @@ public class PointAndClickMovement : MonoBehaviour
         destinationPointer.transform.position = transform.position;
 
         canMove = true;
+        Sounds.StartMusic("event:/Music/Main");
     }
 
    

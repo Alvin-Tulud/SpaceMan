@@ -102,7 +102,7 @@ public class DoDialogue : MonoBehaviour
             dialogueTextBox.text = text;
             if (dialogueCounter != 0)
             {
-                SFX.PlayOneShot("event:/SFX/UI/dialogeProgress");
+                Sounds.PlayOneShot("event:/SFX/UI/dialogeProgress");
             }
             dialogueCounter++;
 

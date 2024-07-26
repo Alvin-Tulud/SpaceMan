@@ -15,6 +15,7 @@ public class GandalfDoDialogue : MonoBehaviour
     public bool needInteract;
     public bool hasReq1;
     public bool hasReq2;
+    public string charAudio = "event:/SFX/UI/dialogeProgress";
     private bool isPlaying;
     private bool doOnce = true;
     private int dialogueCounter = 0;
@@ -67,7 +68,7 @@ public class GandalfDoDialogue : MonoBehaviour
             dialogueTextBox.text = text;
             if (dialogueCounter != 0)
             {
-                SFX.PlayOneShot("event:/SFX/UI/dialogeProgress");
+                Sounds.PlayOneShot("event:/SFX/UI/dialogeProgress");
             }
             dialogueCounter++;
 

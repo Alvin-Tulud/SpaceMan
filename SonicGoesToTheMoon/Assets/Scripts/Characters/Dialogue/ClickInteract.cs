@@ -8,6 +8,8 @@ public class ClickInteract : MonoBehaviour
     Collider2D col;
     DoDialogue dialogue;
 
+    public string charAudio = "event:/SFX/UI/dialogeStart";
+
     Vector2 mousePos;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class ClickInteract : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        SFX.PlayOneShot("event:/SFX/UI/dialogeClose");
+        Sounds.PlayOneShot("event:/SFX/UI/dialogeClose");
 
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).GetComponent<Button>().onClick.RemoveAllListeners();
 
@@ -44,7 +46,7 @@ public class ClickInteract : MonoBehaviour
     {
         dialogue.setIsPlaying(true);
 
-        SFX.PlayOneShot("event:/SFX/UI/dialogeStart");
+        Sounds.PlayOneShot(charAudio);
         Debug.Log("clicked: " + transform.parent.parent.name);
 
         toggleUIMove(false);
