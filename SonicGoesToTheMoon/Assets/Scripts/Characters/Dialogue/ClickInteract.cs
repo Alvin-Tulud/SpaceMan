@@ -35,10 +35,7 @@ public class ClickInteract : MonoBehaviour
 
         dialogue.resetDoOnce();
 
-
-
-
-
+        StartCoroutine(stopspam());
     }
 
 
@@ -66,5 +63,12 @@ public class ClickInteract : MonoBehaviour
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(!can);
 
         GetComponent<Button>().interactable = can;
+    }
+
+    public IEnumerator stopspam()
+    {
+        GetComponent<Button>().interactable = false;
+        yield return new WaitForSeconds(4f);
+        GetComponent<Button>().interactable = true;
     }
 }
