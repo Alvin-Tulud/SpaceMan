@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6686902352792402812}
   - component: {fileID: 5695067916540470013}
   m_Layer: 7
-  m_Name: Homejumper
+  m_Name: Homelander
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkAsset: {fileID: 0}
+  inkAsset: {fileID: 4900000, guid: 9572612742809ce478ccf4c45546c99c, type: 3}
   NpcImage: {fileID: 21300000, guid: 797ad7766f9cad445b9a3fba435da514, type: 3}
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1

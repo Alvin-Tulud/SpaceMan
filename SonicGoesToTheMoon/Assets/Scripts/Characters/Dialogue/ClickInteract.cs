@@ -21,15 +21,6 @@ public class ClickInteract : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         col = GetComponent<Collider2D>();
         dialogue = transform.parent.parent.GetComponent<DoDialogue>();
-
-        if (col.OverlapPoint(mousePos))
-        {
-            FindAnyObjectByType<PointAndClickMovement>().setCanMove(false);
-        }
-        else if (!col.OverlapPoint(mousePos) && !dialogue.getIsPlaying())
-        {
-            FindAnyObjectByType<PointAndClickMovement>().setCanMove(true);
-        }
     }
 
     public IEnumerator interactDone()

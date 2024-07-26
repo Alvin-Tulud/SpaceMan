@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1670620467162162102}
   - component: {fileID: 3948324508541669419}
   m_Layer: 7
-  m_Name: Watermelon
+  m_Name: Nobara Kugisaki
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkAsset: {fileID: 0}
+  inkAsset: {fileID: 4900000, guid: 5d23106df5293fb43b3d0d7f321ba5c7, type: 3}
   NpcImage: {fileID: 21300000, guid: ecfaf878908cba944874a5fc5679e19b, type: 3}
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1

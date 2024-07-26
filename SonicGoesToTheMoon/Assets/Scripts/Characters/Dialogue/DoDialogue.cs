@@ -48,8 +48,6 @@ public class DoDialogue : MonoBehaviour
         dialogueTextBox = text;
         dialogueName = name;
         dialogueImage = headshot;
-
-        dialogue.ResetState();
     }
 
     public void tellStory()
@@ -111,6 +109,7 @@ public class DoDialogue : MonoBehaviour
 
             if (doOnce)
             {
+                dialogue.ResetState();
                 StartCoroutine(clickInteract.interactDone());
                 doOnce = false;
                 dialogueCounter = 0;

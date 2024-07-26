@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkAsset: {fileID: 0}
+  inkAsset: {fileID: 4900000, guid: bfd8d87299f155e409913cff5046a368, type: 3}
   NpcImage: {fileID: 21300000, guid: 5d6cc3705bf4de54c9a1582d11514a6e, type: 3}
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1

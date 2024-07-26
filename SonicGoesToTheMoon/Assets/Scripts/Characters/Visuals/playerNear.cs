@@ -6,7 +6,7 @@ public class playerNear : MonoBehaviour
 {
     Transform playerPos;
     Transform InteractVisual;
-    private const float INTERACT_DISTANCE = 4f;
+    private const float INTERACT_DISTANCE = 3f;
     // Start is called before the first frame update
     void Start()
     {
