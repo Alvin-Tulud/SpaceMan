@@ -23,17 +23,19 @@ public class DoDialogue : MonoBehaviour
     public bool needInteract;
     public bool hasReq;
     private bool hasTalked;
+    private bool neutral;
     private bool isPlaying;
     private bool doOnce = true;
     private int dialogueCounter = 0;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         dialogue = new Story(inkAsset.text);
 
 
         isPlaying = false;
         hasTalked = false;
+        neutral = false;
 
 
         NpcName = transform.name;
@@ -54,6 +56,27 @@ public class DoDialogue : MonoBehaviour
     {
         if (dialogue.canContinue)
         {
+            //text logic
+            Debug.Log("play: " + transform.name);
+            isPlaying = true;
+            if (needInteract)
+            {
+                if (neutral)
+                {
+                    var returnValue = dialogue.variablesState["doneReq"] = true;
+                }
+                else if (hasReq && hasTalked)
+                {
+                    Debug.Log(1);
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
+                }
+                else
+                {
+                    Debug.Log(0);
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
+                }
+            }
+
             //get all data from continue
             string text = dialogue.Continue();
 
@@ -69,22 +92,6 @@ public class DoDialogue : MonoBehaviour
             {
                 dialogueName.text = PlayerName;
                 dialogueImage.sprite = PlayerImage;
-            }
-
-
-            //text logic
-            Debug.Log("play");
-            isPlaying = true;
-            if (needInteract)
-            {
-                if (hasReq && hasTalked)
-                {
-                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
-                }
-                else
-                {
-                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
-                }
             }
 
             //display text
@@ -113,6 +120,12 @@ public class DoDialogue : MonoBehaviour
                 StartCoroutine(clickInteract.interactDone());
                 doOnce = false;
                 dialogueCounter = 0;
+
+
+                if (hasReq && hasTalked)
+                {
+                    neutral = true;
+                }
             }
         }
     }

@@ -417,7 +417,7 @@ MonoBehaviour:
   NpcImage: {fileID: 21300000, guid: 1c65fffd245c4df4f8ca85d8027ed93e, type: 3}
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1
-  hasReq: 1
+  hasReq: 0
 --- !u!1 &8508462115613179297
 GameObject:
   m_ObjectHideFlags: 0

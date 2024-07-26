@@ -10,7 +10,7 @@ VAR doneReq = false
     - hasReq:
         -> yes
     - else:
-        -> no
+        -> yes
 }
 -> END
 

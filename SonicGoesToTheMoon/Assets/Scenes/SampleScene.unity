@@ -128,6 +128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 346447421060485976, guid: 1cdf392b07e70584291204159a51d729, type: 3}
+      propertyPath: hasReq
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1738080900491403933, guid: 1cdf392b07e70584291204159a51d729, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -435,6 +439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5695067916540470013, guid: e3ae6170d16ca524695fdabc829f861d, type: 3}
+      propertyPath: hasReq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7228514783754896316, guid: e3ae6170d16ca524695fdabc829f861d, type: 3}
       propertyPath: m_Name
       value: Homelander
@@ -520,6 +528,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3948324508541669419, guid: 53239d5ec8de01f46ac3d351c703953e, type: 3}
+      propertyPath: hasReq
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7955434439671915671, guid: 53239d5ec8de01f46ac3d351c703953e, type: 3}
       propertyPath: m_Name
       value: Nobara Kugisaki
@@ -647,20 +659,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132405262}
     m_Modifications:
-    - target: {fileID: 394450279813376010, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
-      propertyPath: m_text
-      value: Button Button Button Button Button Button Button Button Button Button
-        Button Button Button Button Button Button Button Button Button Button Button
-        Button Button Button Button Button Button Button Button Button Button Button
-        Button Button Button Button Button Button Button Button
-      objectReference: {fileID: 0}
     - target: {fileID: 424953330813523364, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_Name
       value: DialogueBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 1220601766768433818, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
-      propertyPath: m_Name
-      value: CharPortraitBackground
       objectReference: {fileID: 0}
     - target: {fileID: 3000349869669091001, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_Pivot.x
@@ -742,13 +743,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3101321651612840710, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
-      propertyPath: m_TagString
-      value: DialogueName
+    - target: {fileID: 3170824941686441366, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
       objectReference: {fileID: 0}
-    - target: {fileID: 3851333105283176274, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
-      propertyPath: m_TagString
-      value: DialogueText
+    - target: {fileID: 3170824941686441366, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451676810226752484, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451676810226752484, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935677710130862242, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
