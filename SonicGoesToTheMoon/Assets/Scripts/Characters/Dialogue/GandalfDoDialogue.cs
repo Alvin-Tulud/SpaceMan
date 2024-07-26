@@ -1,28 +1,20 @@
 using Ink.Runtime;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoDialogue : MonoBehaviour
+public class GandalfDoDialogue : MonoBehaviour
 {
     public TextAsset inkAsset;
     private Story dialogue;
     private TextMeshProUGUI dialogueTextBox;
-    private TextMeshProUGUI dialogueName;
-    private Image dialogueImage;
     private ClickInteract clickInteract;
-
-    private string NpcName;
-    public Sprite NpcImage;
-    private string PlayerName;
-    public Sprite PlayerImage;
 
     private Button button;
 
     public bool needInteract;
-    public bool hasReq;
-    private bool hasTalked;
+    public bool hasReq1;
+    public bool hasReq2;
     private bool isPlaying;
     private bool doOnce = true;
     private int dialogueCounter = 0;
@@ -31,23 +23,14 @@ public class DoDialogue : MonoBehaviour
     {
         dialogue = new Story(inkAsset.text);
 
-
         isPlaying = false;
-        hasTalked = false;
-
-
-        NpcName = transform.name;
-        PlayerName = GameObject.FindWithTag("Player").transform.name;
-
 
         clickInteract = transform.GetChild(0).GetChild(0).GetComponent<ClickInteract>();
     }
 
-    public void setTextBox(TextMeshProUGUI text, TextMeshProUGUI name, Image headshot)
+    public void setTextBox(TextMeshProUGUI text)
     {
         dialogueTextBox = text;
-        dialogueName = name;
-        dialogueImage = headshot;
 
         dialogue.ResetState();
     }
@@ -56,32 +39,17 @@ public class DoDialogue : MonoBehaviour
     {
         if (dialogue.canContinue)
         {
-            //get all data from continue
-            string text = dialogue.Continue();
-
-
-            //do visuals first
-            List<string> tags = dialogue.currentTags;
-            if (tags[0].CompareTo("NPC") == 0)
-            {
-                dialogueName.text = NpcName;
-                dialogueImage.sprite = NpcImage;
-            }
-            else
-            {
-                dialogueName.text = PlayerName;
-                dialogueImage.sprite = PlayerImage;
-            }
-
-
-            //text logic
             Debug.Log("play");
             isPlaying = true;
             if (needInteract)
             {
-                if (hasReq && hasTalked)
+                if (hasReq1 && !hasReq2)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
+                }
+                else if (hasReq2)
+                {
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 2);
                 }
                 else
                 {
@@ -89,7 +57,9 @@ public class DoDialogue : MonoBehaviour
                 }
             }
 
-            //display text
+
+            string text = dialogue.Continue();
+
 
             // This removes any white space from the text.
             text = text.Trim();
@@ -106,9 +76,6 @@ public class DoDialogue : MonoBehaviour
         {
             //Debug.Log("done");
             isPlaying = false;
-            hasTalked = true;
-
-
             if (doOnce)
             {
                 StartCoroutine(clickInteract.interactDone());
@@ -118,7 +85,9 @@ public class DoDialogue : MonoBehaviour
         }
     }
 
-    public void setHasReq(bool hasReq) { this.hasReq = hasReq; }
+    public void setHasReq1(bool hasReq) { this.hasReq1 = hasReq; }
+
+    public void setHasReq2(bool hasReq) { this.hasReq2 = hasReq; }
 
     public bool getIsPlaying() { return isPlaying; }
 
@@ -127,6 +96,4 @@ public class DoDialogue : MonoBehaviour
     //public bool getDoOnce(bool doOnce) { return doOnce; }
 
     public void resetDoOnce() { doOnce = true; }
-
-
 }

@@ -607,6 +607,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1132405262}
     m_Modifications:
     - target: {fileID: 394450279813376010, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_text
+      value: Button Button Button Button Button Button Button Button Button Button
+        Button Button Button Button Button Button Button Button Button Button Button
+        Button Button Button Button Button Button Button Button Button Button Button
+        Button Button Button Button Button Button Button Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 394450279813376010, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_fontSize
       value: 50
       objectReference: {fileID: 0}
@@ -633,6 +640,10 @@ PrefabInstance:
     - target: {fileID: 424953330813523364, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220601766768433818, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_TagString
+      value: DialogueImage
       objectReference: {fileID: 0}
     - target: {fileID: 3000349869669091001, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_Pivot.x
@@ -714,9 +725,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3101321651612840710, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
+      propertyPath: m_TagString
+      value: DialogueName
+      objectReference: {fileID: 0}
     - target: {fileID: 3323212574395866711, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3851333105283176274, guid: 64585ff9c99ebf2499887e578d090d88, type: 3}
       propertyPath: m_TagString

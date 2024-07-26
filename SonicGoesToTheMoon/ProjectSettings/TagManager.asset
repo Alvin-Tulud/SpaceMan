@@ -9,6 +9,8 @@ TagManager:
   - DialogueBox
   - DialogueText
   - ProperFloor
+  - DialogueName
+  - DialogueImage
   layers:
   - Default
   - TransparentFX

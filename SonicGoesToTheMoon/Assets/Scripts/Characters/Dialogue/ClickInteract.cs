@@ -61,7 +61,7 @@ public class ClickInteract : MonoBehaviour
 
         toggleUIMove(false);
 
-        dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>());
+        dialogue.setTextBox(GameObject.FindWithTag("DialogueText").GetComponent<TextMeshProUGUI>(), GameObject.FindWithTag("DialogueName").GetComponent<TextMeshProUGUI>(), GameObject.FindWithTag("DialogueImage").GetComponent<Image>());
 
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).GetComponent<Button>().onClick.AddListener(dialogue.tellStory);
 

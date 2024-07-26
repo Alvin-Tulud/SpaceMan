@@ -329,6 +329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkAsset: {fileID: 0}
+  NpcImage: {fileID: 21300000, guid: 8a7fad1701df5ef4a9e5774d4db2d022, type: 3}
+  PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1
   hasReq: 1
 --- !u!1 &7044486761601108480
