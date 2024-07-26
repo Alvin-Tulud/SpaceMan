@@ -15,26 +15,26 @@ VAR doneReq = false
 -> END
 
 === neutral ===
-H: You still need something monkey? #NPC
-P: … #Player
-P: (Let’s get out of here.) #Player
+You still need something monkey? #NPC
+… #Player
+(Let’s get out of here.) #Player
 
 -> END
 
 === yes ===
-P: Hey. #Player
-H: You. Read this now. #NPC
-P: “Four score and seven years ago our fathers brought forth…” You wrote this? #Player
-H: What? Think I’m incapable? #NPC
-P: … #Player
-H: Hah. #NPC
-H: I wrote this entire speech, but if you recognized anything from whatever history lessons they taught you in school, you would know that it’s inspired by the words of our forefathers. #NPC
-H: The Gettysburg Address. President Lincoln. Spoke of great liberty and equality among the people. Any bells ringing in that little head? #NPC
-P: Oh, uhm yeah. #Player
-H: Changing your tune? Of course, of course. What would I expect? #NPC
-H: You know what, hold onto that copy. Read it once, then again, and if you can’t recite it by tomorrow… Well, you wouldn’t want to see, would you? #NPC
-P: Ahaha, yeah, I gotcha. #Player
-P: (I gotta get out of here.) #Player
+Hey. #Player
+You. Read this now. #NPC
+“Four score and seven years ago our fathers brought forth…” You wrote this? #Player
+What? Think I’m incapable? #NPC
+… #Player
+Hah. #NPC
+I wrote this entire speech, but if you recognized anything from whatever history lessons they taught you in school, you would know that it’s inspired by the words of our forefathers. #NPC
+The Gettysburg Address. President Lincoln. Spoke of great liberty and equality among the people. Any bells ringing in that little head? #NPC
+Oh, uhm yeah. #Player
+Changing your tune? Of course, of course. What would I expect? #NPC
+You know what, hold onto that copy. Read it once, then again, and if you can’t recite it by tomorrow… Well, you wouldn’t want to see, would you? #NPC
+Ahaha, yeah, I gotcha. #Player
+(I gotta get out of here.) #Player
 
 
 
