@@ -378,7 +378,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 274228044084972646, guid: 1a14438510ec05348a05072da048f358, type: 3}
   m_PrefabInstance: {fileID: 4915256416931966568}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4915256416931966570}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6997852543283242094, guid: 1a14438510ec05348a05072da048f358, type: 3}
   m_PrefabInstance: {fileID: 4915256416931966568}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4915256416931966569}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8376073445675546277, guid: 1a14438510ec05348a05072da048f358, type: 3}
   m_PrefabInstance: {fileID: 4915256416931966568}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4915256416931966571}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
@@ -1491,8 +1491,71 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 976862785589579530, guid: 1a14438510ec05348a05072da048f358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4915256416931966574}
+    - targetCorrespondingSourceObject: {fileID: 838551937144328415, guid: 1a14438510ec05348a05072da048f358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4915256416931966573}
+    - targetCorrespondingSourceObject: {fileID: 5691980794744009480, guid: 1a14438510ec05348a05072da048f358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4915256416931966572}
   m_SourcePrefab: {fileID: 100100000, guid: 1a14438510ec05348a05072da048f358, type: 3}
+--- !u!1 &4915256416931966569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5691980794744009480, guid: 1a14438510ec05348a05072da048f358, type: 3}
+  m_PrefabInstance: {fileID: 4915256416931966568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4915256416931966570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 838551937144328415, guid: 1a14438510ec05348a05072da048f358, type: 3}
+  m_PrefabInstance: {fileID: 4915256416931966568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4915256416931966571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 976862785589579530, guid: 1a14438510ec05348a05072da048f358, type: 3}
+  m_PrefabInstance: {fileID: 4915256416931966568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4915256416931966572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915256416931966569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f19f7c4a85e3e498c756f1fdae0b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1128519562}
+--- !u!114 &4915256416931966573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915256416931966570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f19f7c4a85e3e498c756f1fdae0b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 687954691}
+--- !u!114 &4915256416931966574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915256416931966571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f19f7c4a85e3e498c756f1fdae0b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1879717175}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
