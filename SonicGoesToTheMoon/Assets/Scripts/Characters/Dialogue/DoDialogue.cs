@@ -81,7 +81,7 @@ public class DoDialogue : MonoBehaviour
                     
                     //Gives the item to the player
                     Questhandler q = new Questhandler();
-                    q.takeFromPlayer(gameObject.name);
+                    //q.takeFromPlayer(gameObject.name);
                     q.giveToPlayer(gameObject.name);
                 }
                 else
