@@ -7640,7 +7640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755019500606062634, guid: c28fa6c3fcd98e94f83cd2ff23f8accf, type: 3}
       propertyPath: m_Name
-      value: Eric Halaand
+      value: Eric Haaland
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
