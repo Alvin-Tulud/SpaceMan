@@ -79,7 +79,7 @@ public class ClickInteract : MonoBehaviour
     public IEnumerator stopspam()
     {
         GetComponent<Button>().interactable = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.25f);
         GetComponent<Button>().interactable = true;
     }
 }
