@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 69430329512349117}
   - component: {fileID: 5165784636168903827}
   m_Layer: 7
-  m_Name: Eric Halaand
+  m_Name: Eric Haaland
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

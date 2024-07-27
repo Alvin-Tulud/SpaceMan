@@ -70,6 +70,8 @@ public class Questhandler : MonoBehaviour
     Dictionary<string, string> givingToPlayer;
     Dictionary<string, string> takingFromPlayer;
 
+    public List<DoDialogue> dialogueList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,12 +92,61 @@ public class Questhandler : MonoBehaviour
             {"Nobara Kugisaki", "watermelon"},
             {"Lincoln", "gettysburg"}
         };
+
+        dialogueList = new List<DoDialogue>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        foreach(DoDialogue dialogue in dialogueList)
+        {
+            //check for taking
+            if (dialogue.transform.name == "Nobara Kugisaki" && dialogue.getHasTalked()  && takeFromPlayer("watermelon"))
+            {
+                dialogue.setHasReq(true);
+            }
+            else if (dialogue.transform.name == "Lincoln" && dialogue.getHasTalked() && takeFromPlayer("gettysburg"))
+            {
+                dialogue.setHasReq(true);
+            }
+
+            //general interactions
+            else if (dialogue.transform.name == "Eric Haaland" && dialogue.getHasTalked() && GameObject.Find("Gandalf").GetComponent<DoDialogue>().getHasTalked())
+            {
+                dialogue.setHasReq(true);
+            }
+            else if (dialogue.transform.name == "Adachi" && dialogue.getHasTalked() && GameObject.Find("Gandalf").GetComponent<DoDialogue>().getHasTalked())
+            {
+                dialogue.setHasReq(true);
+            }
+            else if (dialogue.transform.name == "Captain Sparkles" && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasTalked())
+            {
+                dialogue.setHasReq(true);
+            }
+            else if (dialogue.transform.name == "Cool Gator" && dialogue.getHasTalked() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasTalked())
+            {
+                dialogue.setHasReq(true);
+            }
+            else if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasReq())
+            {
+                dialogue.setHasReq(true);
+
+                if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Adachi").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Eric Haaland").GetComponent<DoDialogue>().getHasReq())
+                {
+                    dialogue.setHasBothReq(true);
+                }
+            }
+            else if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Adachi").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Eric Haaland").GetComponent<DoDialogue>().getHasReq())
+            {
+                dialogue.setHasReq(true);
+
+                if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasReq())
+                {
+                    dialogue.setHasBothReq(true);
+                }
+            }
+        }
     }
 
     //Function for NPC giving the player items. Gives them item based on the player.
@@ -126,15 +177,18 @@ public class Questhandler : MonoBehaviour
      */
 
     //Function for NPC taking the player's item. Takes an item based on who the NPC is.
-    public void takeFromPlayer(string name)
+    public bool takeFromPlayer(string name)
     {
         //Only take if the NPC has something to take
         if(takingFromPlayer.ContainsKey(name)==true)
         {
             string itemToTake = takingFromPlayer[name];
             addItem(itemToTake);
+
+            return true;
         }
-        
+
+        return false;
     }
 
     //Function for checking quest req.

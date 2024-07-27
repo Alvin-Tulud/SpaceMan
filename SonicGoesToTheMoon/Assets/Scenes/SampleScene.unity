@@ -584,45 +584,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396656710}
   m_CullTransparentMesh: 1
---- !u!1 &1439747022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5840278809370897349, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-  m_PrefabInstance: {fileID: 4836938072344817108}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1439747023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439747022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70474d0a49fdd1745b8fea21c4ed9363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1439747024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439747022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df0cf8a5d20f0bc43ab8b2b902c067c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInv: []
-  slot1: {fileID: 741162744}
-  slot2: {fileID: 1746098546}
-  slot3: {fileID: 44145479}
-  slot4: {fileID: 1396656710}
-  rocketBottom: {fileID: 1952170389943966698, guid: 813b4e0a731ab28408d9334aa3d047ee, type: 3}
-  rocketTop: {fileID: 9172039925137130809, guid: 813b4e0a731ab28408d9334aa3d047ee, type: 3}
-  gettysburg: {fileID: 2337225774582341286, guid: c801f72cb3a1a8846b4d67f9370a21e9, type: 3}
-  watermelon: {fileID: 7797460114789565060, guid: 4bf7f04c50b69964cbbbf9977c03e9d7, type: 3}
-  emptySlot: {fileID: 7577569481465865205, guid: dc83069e33a2279448e83ead7032ed2c, type: 3}
 --- !u!1 &1710507856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,14 +1098,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3828627929476098277, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 3241736953061103364, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
+      propertyPath: slot1
       value: 
-      objectReference: {fileID: 9100000, guid: 2b426d1689b932d4ea188cb5233ff232, type: 2}
-    - target: {fileID: 4327530918921871294, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 741162744}
+    - target: {fileID: 3241736953061103364, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
+      propertyPath: slot2
+      value: 
+      objectReference: {fileID: 1746098546}
+    - target: {fileID: 3241736953061103364, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
+      propertyPath: slot3
+      value: 
+      objectReference: {fileID: 44145479}
+    - target: {fileID: 3241736953061103364, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
+      propertyPath: slot4
+      value: 
+      objectReference: {fileID: 1396656710}
     - target: {fileID: 5840278809370897349, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1157,20 +1126,10 @@ PrefabInstance:
       propertyPath: blackBackgrondFade
       value: 
       objectReference: {fileID: 2064399532}
-    - target: {fileID: 8378721451202707830, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-      propertyPath: blackBackgrondFadeoObject
-      value: 
-      objectReference: {fileID: 2064399530}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5840278809370897349, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1439747023}
-    - targetCorrespondingSourceObject: {fileID: 5840278809370897349, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1439747024}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
 --- !u!1001 &4866339136123488395
 PrefabInstance:
