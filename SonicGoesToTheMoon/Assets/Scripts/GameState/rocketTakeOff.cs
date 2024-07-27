@@ -11,8 +11,10 @@ public class rocketTakeOff : MonoBehaviour
     float currTime;
     float endTime;
     bool canTakeOff;
+    bool notcalledyet;
 
     public GameObject SpaceAnim;
+    DoDialogue dialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +27,22 @@ public class rocketTakeOff : MonoBehaviour
 
         canTakeOff = false;
 
+        notcalledyet = false;
+
         SpaceAnim.SetActive(false);
+
+        dialogue = GameObject.Find("Rocket").GetComponent<DoDialogue>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (dialogue.getNeutral() && !notcalledyet)
+        {
+            takeOff();
+            notcalledyet = true;
+        }
+
         if (canTakeOff)
         {
             if (currTime <= endTime)
