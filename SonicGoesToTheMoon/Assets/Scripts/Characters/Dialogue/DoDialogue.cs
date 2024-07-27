@@ -159,6 +159,8 @@ public class DoDialogue : MonoBehaviour
 
     public bool getHasTalked() { return hasTalked; }
 
+    public bool getNeutral() { return neutral; }
+
 
     //public bool getDoOnce(bool doOnce) { return doOnce; }
 
