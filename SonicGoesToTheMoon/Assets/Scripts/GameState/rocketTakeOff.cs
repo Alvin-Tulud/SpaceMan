@@ -72,6 +72,6 @@ public class rocketTakeOff : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
