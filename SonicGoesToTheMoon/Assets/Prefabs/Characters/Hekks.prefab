@@ -407,8 +407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkAsset: {fileID: 4900000, guid: 7386021f54033f642946fb965af14757, type: 3}
-  NpcImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
+  NpcImage: {fileID: 21300000, guid: dc206a5f92d06e74fb3ec025f5a6c74f, type: 3}
+  PlayerImage: {fileID: 2831676589248891045, guid: 2fc03b40cdc4cf1438c8420e8bf3b99f, type: 3}
   needInteract: 0
   hasReq: 0
   hasBothReq: 0

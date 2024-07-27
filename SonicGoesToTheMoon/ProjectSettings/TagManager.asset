@@ -11,6 +11,7 @@ TagManager:
   - ProperFloor
   - DialogueName
   - DialogueImage
+  - Inventory
   layers:
   - Default
   - TransparentFX
