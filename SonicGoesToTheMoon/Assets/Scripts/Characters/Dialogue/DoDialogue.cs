@@ -22,8 +22,9 @@ public class DoDialogue : MonoBehaviour
 
     public bool needInteract;
     public bool hasReq;
-    public bool hasBothReq;
+    private bool hasBothReq;
     private bool hasTalked;
+    private bool hasGiven;
     private bool neutral;
     private bool isPlaying;
     private bool doOnce = true;
@@ -36,6 +37,7 @@ public class DoDialogue : MonoBehaviour
 
         isPlaying = false;
         hasTalked = false;
+        hasGiven = false;
         neutral = false;
 
 
@@ -127,12 +129,14 @@ public class DoDialogue : MonoBehaviour
                 doOnce = false;
                 dialogueCounter = 0;
 
-                if (hasReq && hasTalked)
+                if (hasReq && hasTalked && !hasGiven)
                 {
                     Questhandler q = FindAnyObjectByType<Questhandler>();
                     //q.takeFromPlayer(gameObject.name);
                     q.giveToPlayer(gameObject.name);
                     neutral = true;
+
+                    hasGiven = true;
                 }
             }
         }

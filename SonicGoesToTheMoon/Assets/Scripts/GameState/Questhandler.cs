@@ -92,8 +92,6 @@ public class Questhandler : MonoBehaviour
             {"Nobara Kugisaki", "watermelon"},
             {"Lincoln", "gettysburg"}
         };
-
-        dialogueList = new List<DoDialogue>();
     }
 
     // Update is called once per frame
