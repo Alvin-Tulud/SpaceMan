@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2fc03b40cdc4cf1438c8420e8bf3b99f
+guid: ce6bae3d5a0dd56479ef45e5c6a035d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2831676589248891045
-    second: astronautidle1_0
+      213: -8197439587160887737
+    second: Untitled601_20240726233909_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -83,31 +83,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -122,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: astronautidle1_0
+      name: Untitled601_20240726233909_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 6
-        width: 121
-        height: 229
+        x: 58
+        y: 3
+        width: 331
+        height: 452
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a848f4ead22c4720800000000000000
-      internalID: 2831676589248891045
+      spriteID: 74eec8b9028dc3e80800000000000000
+      internalID: -8197439587160887737
       vertices: []
       indices: 
       edges: []
@@ -152,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      astronautidle1_0: 2831676589248891045
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

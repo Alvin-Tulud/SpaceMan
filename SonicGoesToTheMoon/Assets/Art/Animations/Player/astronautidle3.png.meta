@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      astronautidle3_0: 4334372572411929153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
