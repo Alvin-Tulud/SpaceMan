@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Questhandler : MonoBehaviour
 {
@@ -50,6 +51,9 @@ public class Questhandler : MonoBehaviour
 
     //Inventory stuff (Sorry for putting everything in 1 script. I did what I had to do)
 
+    //The inventory itself
+    public List<string> playerInv;
+
     //Inventory slots, accessible in order to change their sprites
     public GameObject slot1;
     public GameObject slot2;
@@ -66,7 +70,9 @@ public class Questhandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Create the dictionaries
+
+
     }
 
     // Update is called once per frame
@@ -124,4 +130,58 @@ public class Questhandler : MonoBehaviour
     //  update sprite
     //else
     //  empty sprite
+    public void renderInventory()
+    {
+        GameObject slot;
+        for(int i=0; i<3; i++)
+        {
+            //Determine what slot we are trying to affect
+            //brain is fried Rn and this is the easiest way for me to look at it
+            if(i==0)
+            {
+                slot = slot1;
+            }
+            else if(i==1)
+            {
+                slot = slot2;
+            }
+            else if (i == 2)
+            {
+                slot = slot3;
+            }
+            else
+            {
+                slot = slot4;
+            }
+
+            //Only check for sprite from inv if the inv is big enough
+            if (playerInv.Count-1 >= i)
+            {
+                //manually change sprite based on item
+                if(playerInv[i] == "watermelon")
+                {
+                    slot.GetComponent<Image>().sprite = watermelon;
+                }
+                else if (playerInv[i] == "gettysburg")
+                {
+                    slot.GetComponent<Image>().sprite = gettysburg;
+                }
+                else if (playerInv[i] == "rocketTop")
+                {
+                    slot.GetComponent<Image>().sprite = rocketTop;
+                }
+                else if (playerInv[i] == "rocketBottom")
+                {
+                    slot.GetComponent<Image>().sprite = rocketBottom;
+                }
+
+            }
+
+            //Rest of the slots will be default
+            else
+            {
+                slot.GetComponent<Image>().sprite = emptySlot;
+            }
+        }
+    }
 }
