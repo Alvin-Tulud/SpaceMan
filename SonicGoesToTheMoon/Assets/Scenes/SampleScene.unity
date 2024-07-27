@@ -1427,6 +1427,10 @@ PrefabInstance:
       propertyPath: SpaceAnim
       value: 
       objectReference: {fileID: 300153309}
+    - target: {fileID: 1672386416676505608, guid: 1a14438510ec05348a05072da048f358, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2831306210474728437, guid: 1a14438510ec05348a05072da048f358, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.412351

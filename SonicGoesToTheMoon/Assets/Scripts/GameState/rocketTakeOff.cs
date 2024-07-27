@@ -15,7 +15,7 @@ public class rocketTakeOff : MonoBehaviour
     bool notcalledyet;
 
     public GameObject SpaceAnim;
-    Image RocketImg;
+    SpriteRenderer RocketImg;
     DoDialogue dialogue;
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class rocketTakeOff : MonoBehaviour
 
         dialogue = GameObject.Find("Rocket").GetComponent<DoDialogue>();
 
-        RocketImg = GetComponent<Image>();
+        RocketImg = GetComponent<SpriteRenderer>();
 
         RocketImg.enabled = false;
     }
