@@ -28,6 +28,7 @@ public class DoDialogue : MonoBehaviour
     private bool neutral;
     private bool isPlaying;
     private bool doOnce = true;
+    private bool doOnce2 = true;
     private int dialogueCounter = 0;
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,14 @@ public class DoDialogue : MonoBehaviour
     {
         if (dialogue.canContinue)
         {
+
+            //if(doOnce2)
+            //{
+            //    doOnce = false;
+            //    Questhandler q = FindAnyObjectByType<Questhandler>();
+            //    q.takeFromPlayer(gameObject.name);
+            //}
+
             //text logic
             Debug.Log("play: " + transform.name);
             isPlaying = true;
@@ -78,6 +87,8 @@ public class DoDialogue : MonoBehaviour
                 else if (hasReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
+
+
                 }
                 else
                 {
@@ -132,7 +143,7 @@ public class DoDialogue : MonoBehaviour
                 if (hasReq && hasTalked && !hasGiven)
                 {
                     Questhandler q = FindAnyObjectByType<Questhandler>();
-                    //q.takeFromPlayer(gameObject.name);
+                    q.takeFromPlayer(gameObject.name);
                     q.giveToPlayer(gameObject.name);
                     neutral = true;
 
