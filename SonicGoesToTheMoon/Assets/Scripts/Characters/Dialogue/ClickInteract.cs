@@ -28,7 +28,7 @@ public class ClickInteract : MonoBehaviour
 
     public IEnumerator interactDone()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         Sounds.PlayOneShot("event:/SFX/UI/dialogeClose");
 
@@ -73,7 +73,7 @@ public class ClickInteract : MonoBehaviour
     public IEnumerator stopspam()
     {
         GetComponent<Button>().interactable = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         GetComponent<Button>().interactable = true;
     }
 }
