@@ -105,7 +105,7 @@ public class Questhandler : MonoBehaviour
                 Debug.Log("Nobara");
                 dialogue.setHasReq(true);
             }
-            else if (dialogue.transform.name.CompareTo("Lincoln") == 0 && dialogue.getHasTalked() && takeFromPlayer("gettysburg"))
+            else if (dialogue.transform.name.CompareTo("Lincoln") == 0 && dialogue.getHasTalked() && takeFromPlayer("Lincoln"))
             {
                 Debug.Log("Lincoln");
                 dialogue.setHasReq(true);
@@ -180,12 +180,14 @@ public class Questhandler : MonoBehaviour
     //Function for NPC taking the player's item. Takes an item based on who the NPC is.
     public bool takeFromPlayer(string name)
     {
+        Debug.Log("im boutta take... FROM " + name);
         //Only take if the NPC has something to take
-        if(takingFromPlayer.ContainsKey(name)==true)
+        if (takingFromPlayer.ContainsKey(name))
         {
             string itemToTake = takingFromPlayer[name];
             removeItem(itemToTake);
 
+            Debug.Log("I just took " + itemToTake);
             return true;
         }
 
