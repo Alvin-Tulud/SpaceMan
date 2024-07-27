@@ -100,7 +100,7 @@ public class Questhandler : MonoBehaviour
         foreach(DoDialogue dialogue in dialogueList)
         {
             //check for taking
-            if (dialogue.transform.name.CompareTo("Nobara Kugisaki") == 0 && dialogue.getHasTalked()  && takeFromPlayer("watermelon"))
+            if (dialogue.transform.name.CompareTo("Nobara Kugisaki") == 0 && dialogue.getHasTalked()  && takeFromPlayer("Nobara Kugisaki"))
             {
                 Debug.Log("Nobara");
                 dialogue.setHasReq(true);
@@ -145,6 +145,10 @@ public class Questhandler : MonoBehaviour
                 {
                     dialogue.setHasBothReq(true);
                 }
+            }
+            else if (dialogue.transform.name.CompareTo("Gandalf") == 0 && playerInv.Contains("rocketTop") && playerInv.Contains("rocketBottom"))
+            {
+                dialogue.setHasReq(true);
             }
         }
     }
