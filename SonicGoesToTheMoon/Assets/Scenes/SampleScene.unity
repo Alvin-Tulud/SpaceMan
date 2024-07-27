@@ -516,6 +516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Homelander
       objectReference: {fileID: 0}
+    - target: {fileID: 7451859990097368689, guid: e3ae6170d16ca524695fdabc829f861d, type: 3}
+      propertyPath: charAudio
+      value: event:/SFX/Characters/homelander
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
