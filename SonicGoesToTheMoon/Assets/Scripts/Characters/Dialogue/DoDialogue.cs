@@ -60,21 +60,31 @@ public class DoDialogue : MonoBehaviour
     {
         if (dialogue.canContinue)
         {
-
-            //if(doOnce2)
-            //{
-            //    doOnce = false;
-            //    Questhandler q = FindAnyObjectByType<Questhandler>();
-            //    q.takeFromPlayer(gameObject.name);
-            //}
-
             //text logic
             Debug.Log("play: " + transform.name);
             isPlaying = true;
             
             if (needInteract)
             {
-                //check if has req();
+
+
+                if (doOnce2)
+                {
+                    doOnce2 = false;
+
+                    //not first interaction and other npc quest is done take the player's item and change dialogue
+                    if (hasTalked && name.CompareTo("Nobara Kugisaki") == 0 && GameObject.Find("Lincoln").GetComponent<DoDialogue>().getNeutral() ||
+                        hasTalked && name.CompareTo("Lincoln") == 0 && GameObject.Find("Homelander").GetComponent<DoDialogue>().getNeutral())
+                    {
+                        this.hasReq = true;
+
+
+                        Questhandler q = FindAnyObjectByType<Questhandler>();
+                        q.takeFromPlayer(gameObject.name);
+                    }
+                }
+
+
 
                 if (neutral)
                 {
@@ -87,8 +97,6 @@ public class DoDialogue : MonoBehaviour
                 else if (hasReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
-
-
                 }
                 else
                 {
@@ -135,7 +143,6 @@ public class DoDialogue : MonoBehaviour
 
             if (doOnce)
             {
-                dialogue.ResetState();
                 StartCoroutine(clickInteract.interactDone());
                 doOnce = false;
                 dialogueCounter = 0;
@@ -143,7 +150,7 @@ public class DoDialogue : MonoBehaviour
                 if (hasReq && hasTalked && !hasGiven)
                 {
                     Questhandler q = FindAnyObjectByType<Questhandler>();
-                    q.takeFromPlayer(gameObject.name);
+                    //q.takeFromPlayer(gameObject.name);
                     q.giveToPlayer(gameObject.name);
                     neutral = true;
 
@@ -176,5 +183,10 @@ public class DoDialogue : MonoBehaviour
 
     public void resetDoOnce() { doOnce = true; }
 
+    public void resetDoOnce2() { doOnce2 = true; }
 
+    public void resetStory()
+    {
+        dialogue.ResetState();
+    } 
 }

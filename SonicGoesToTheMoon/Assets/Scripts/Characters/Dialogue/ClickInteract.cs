@@ -21,6 +21,7 @@ public class ClickInteract : MonoBehaviour
     {
         stopspam = false;
         currtime = 0;
+        dialogue = transform.parent.parent.GetComponent<DoDialogue>();
     }
 
     // Update is called once per frame
@@ -57,6 +58,8 @@ public class ClickInteract : MonoBehaviour
         toggleUIMove(true);
 
         dialogue.resetDoOnce();
+        dialogue.resetDoOnce2();
+        dialogue.resetStory();
 
         if (GetComponent<Button>() != null)
         {
