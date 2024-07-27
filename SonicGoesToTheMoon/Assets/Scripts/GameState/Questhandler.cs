@@ -102,13 +102,13 @@ public class Questhandler : MonoBehaviour
             DoDialogue d = dialogueList[i];
 
             //check for taking
-            if (d.transform.name.CompareTo("Nobara Kugisaki") == 0 && d.getHasTalked() && d.getIsPlaying() && GameObject.Find("Lincoln").GetComponent<DoDialogue>().getNeutral() && takeFromPlayer("Nobara Kugisaki"))
+            if (d.transform.name.CompareTo("Nobara Kugisaki") == 0 && d.getHasTalked() && d.getIsPlaying() && GameObject.Find("Lincoln").GetComponent<DoDialogue>().getNeutral() && checkTakeFromPlayer("Nobara Kugisaki"))
             {
                 Debug.Log("Nobara");
                 d.setHasReq(true);
                 dialogueList.Remove(d);
             }
-            else if (d.transform.name.CompareTo("Lincoln") == 0 && d.getHasTalked() && d.getIsPlaying() && GameObject.Find("Homelander").GetComponent<DoDialogue>().getNeutral() && takeFromPlayer("Lincoln"))
+            else if (d.transform.name.CompareTo("Lincoln") == 0 && d.getHasTalked() && d.getIsPlaying() && GameObject.Find("Homelander").GetComponent<DoDialogue>().getNeutral() && checkTakeFromPlayer("Lincoln"))
             {
                 Debug.Log("Lincoln");
                 d.setHasReq(true);
@@ -193,7 +193,7 @@ public class Questhandler : MonoBehaviour
      */
 
     //Function for NPC taking the player's item. Takes an item based on who the NPC is.
-    public bool takeFromPlayer(string name)
+    public void takeFromPlayer(string name)
     {
         Debug.Log("im boutta take... FROM " + name);
         //Only take if the NPC has something to take
@@ -205,11 +205,24 @@ public class Questhandler : MonoBehaviour
                 removeItem(itemToTake);
 
                 Debug.Log("I just took " + itemToTake);
-                return true;
+                //return true;
             }
             
         }
 
+        //return false;
+    }
+
+    public bool checkTakeFromPlayer(string name)
+    {
+        if (takingFromPlayer.ContainsKey(name))
+        {
+            string itemToTake = takingFromPlayer[name];
+            if (playerInv.Contains(itemToTake))
+            {
+                return true;
+            }
+        }
         return false;
     }
 
