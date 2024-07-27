@@ -99,47 +99,50 @@ public class Questhandler : MonoBehaviour
     {
         foreach(DoDialogue dialogue in dialogueList)
         {
+            Debug.Log(dialogue.transform.name);
             //check for taking
-            if (dialogue.transform.name == "Nobara Kugisaki" && dialogue.getHasTalked()  && takeFromPlayer("watermelon"))
+            if (dialogue.transform.name.CompareTo("Nobara Kugisaki") == 0 && dialogue.getHasTalked()  && takeFromPlayer("watermelon"))
             {
+                Debug.Log("Nobara");
                 dialogue.setHasReq(true);
             }
-            else if (dialogue.transform.name == "Lincoln" && dialogue.getHasTalked() && takeFromPlayer("gettysburg"))
+            else if (dialogue.transform.name.CompareTo("Lincoln") == 0 && dialogue.getHasTalked() && takeFromPlayer("gettysburg"))
             {
+                Debug.Log("Lincoln");
                 dialogue.setHasReq(true);
             }
 
             //general interactions
-            else if (dialogue.transform.name == "Eric Haaland" && dialogue.getHasTalked() && GameObject.Find("Gandalf").GetComponent<DoDialogue>().getHasTalked())
+            else if (dialogue.transform.name.CompareTo("Eric Haaland") == 0 && dialogue.getHasTalked() && GameObject.Find("Gandalf").GetComponent<DoDialogue>().getHasTalked())
             {
                 dialogue.setHasReq(true);
             }
-            else if (dialogue.transform.name == "Adachi" && dialogue.getHasTalked() && GameObject.Find("Gandalf").GetComponent<DoDialogue>().getHasTalked())
+            else if (dialogue.transform.name.CompareTo("Adachi") == 0 && dialogue.getHasTalked() && GameObject.Find("Gandalf").GetComponent<DoDialogue>().getHasTalked())
             {
                 dialogue.setHasReq(true);
             }
-            else if (dialogue.transform.name == "Captain Sparkles" && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasTalked())
+            else if (dialogue.transform.name.CompareTo("Captain Sparkles") == 0  && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasTalked())
             {
                 dialogue.setHasReq(true);
             }
-            else if (dialogue.transform.name == "Cool Gator" && dialogue.getHasTalked() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasTalked())
+            else if (dialogue.transform.name.CompareTo("Cool Gator") == 0 && dialogue.getHasTalked() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasTalked())
             {
                 dialogue.setHasReq(true);
             }
-            else if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasReq())
+            else if (dialogue.transform.name.CompareTo("Gandalf") == 0 && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasReq())
             {
                 dialogue.setHasReq(true);
 
-                if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Adachi").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Eric Haaland").GetComponent<DoDialogue>().getHasReq())
+                if (dialogue.transform.name.CompareTo("Gandalf") == 0 && dialogue.getHasTalked() && GameObject.Find("Adachi").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Eric Haaland").GetComponent<DoDialogue>().getHasReq())
                 {
                     dialogue.setHasBothReq(true);
                 }
             }
-            else if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Adachi").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Eric Haaland").GetComponent<DoDialogue>().getHasReq())
+            else if (dialogue.transform.name.CompareTo("Gandalf") == 0 && dialogue.getHasTalked() && GameObject.Find("Adachi").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Eric Haaland").GetComponent<DoDialogue>().getHasReq())
             {
                 dialogue.setHasReq(true);
 
-                if (dialogue.transform.name == "Gandalf" && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasReq())
+                if (    dialogue.transform.name.CompareTo("Gandalf") == 0 && dialogue.getHasTalked() && GameObject.Find("Cool Gator").GetComponent<DoDialogue>().getHasReq() && GameObject.Find("Captain Sparkles").GetComponent<DoDialogue>().getHasReq())
                 {
                     dialogue.setHasBothReq(true);
                 }
@@ -259,19 +262,19 @@ public class Questhandler : MonoBehaviour
             if (playerInv.Count-1 >= i)
             {
                 //manually change sprite based on item
-                if(playerInv[i] == "watermelon")
+                if(playerInv[i].CompareTo("watermelon") == 0)
                 {
                     slot.GetComponent<Image>().sprite = watermelon;
                 }
-                else if (playerInv[i] == "gettysburg")
+                else if (playerInv[i].CompareTo("gettysburg") == 0)
                 {
                     slot.GetComponent<Image>().sprite = gettysburg;
                 }
-                else if (playerInv[i] == "rocketTop")
+                else if (playerInv[i].CompareTo("rocketTop") == 0)
                 {
                     slot.GetComponent<Image>().sprite = rocketTop;
                 }
-                else if (playerInv[i] == "rocketBottom")
+                else if (playerInv[i].CompareTo("rocketBottom") == 0)
                 {
                     slot.GetComponent<Image>().sprite = rocketBottom;
                 }
