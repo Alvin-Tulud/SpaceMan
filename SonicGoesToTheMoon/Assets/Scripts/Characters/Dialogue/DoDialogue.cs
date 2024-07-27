@@ -67,12 +67,10 @@ public class DoDialogue : MonoBehaviour
                 }
                 else if (hasReq && hasTalked)
                 {
-                    Debug.Log(1);
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
                 }
                 else
                 {
-                    Debug.Log(0);
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
                 }
             }

@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cdd1091231a354588b62dbb6856eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charAudio: event:/SFX/UI/dialogeStart
 --- !u!61 &368353995277198560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -520,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkAsset: {fileID: 0}
+  inkAsset: {fileID: 4900000, guid: 59903eacbc1ab984d80b89280c58ee15, type: 3}
   NpcImage: {fileID: 21300000, guid: e1e5a84b7bec9154499d38340fd9d4e2, type: 3}
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1

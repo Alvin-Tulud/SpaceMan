@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cdd1091231a354588b62dbb6856eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charAudio: event:/SFX/UI/dialogeStart
 --- !u!61 &7528599887522254468
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -319,8 +320,9 @@ GameObject:
   - component: {fileID: 7749026651291418731}
   - component: {fileID: 8619275783529485363}
   - component: {fileID: 676200979557755617}
+  - component: {fileID: 5993455555701716196}
   m_Layer: 7
-  m_Name: Gemdalf
+  m_Name: Gandalf
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,6 +420,24 @@ MonoBehaviour:
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1
   hasReq: 0
+--- !u!114 &5993455555701716196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5433168589696948830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5dc8d8360a0c76478271f3e9ef734c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkAsset: {fileID: 4900000, guid: a73743ae3284b934babc67b9a9cf6650, type: 3}
+  NpcImage: {fileID: 21300000, guid: 1c65fffd245c4df4f8ca85d8027ed93e, type: 3}
+  PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
+  needInteract: 0
+  hasReq: 0
+  hasBothReq: 0
 --- !u!1 &8508462115613179297
 GameObject:
   m_ObjectHideFlags: 0

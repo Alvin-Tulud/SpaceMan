@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8415301613290885197}
   - component: {fileID: 5199470206380529537}
   m_Layer: 7
-  m_Name: Adookie
+  m_Name: Adachi
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4490f299c7bfb4845ae755ae23af7acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkAsset: {fileID: 0}
+  inkAsset: {fileID: 4900000, guid: bad9b81f83a779b46b57ebce4dac8344, type: 3}
   NpcImage: {fileID: 21300000, guid: 66b6bc81697f0cf4cae179369c77e82c, type: 3}
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1
@@ -479,6 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cdd1091231a354588b62dbb6856eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charAudio: event:/SFX/UI/dialogeStart
 --- !u!61 &4383532709737109242
 BoxCollider2D:
   m_ObjectHideFlags: 0

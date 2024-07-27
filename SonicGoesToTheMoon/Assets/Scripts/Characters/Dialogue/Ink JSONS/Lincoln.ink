@@ -33,7 +33,7 @@ I bid you an affectionate farewell. #NPC
 
 === no ===
 No way, that’s… #Player
-Good day, young sir. #NPC
+Good day, young citizen. #NPC
 Good day, President Lincoln. The weather is… good. #Player
 Yes, I do agree but it may not be one I can enjoy. I apologize if this is sudden but, you see… I lost my copy of the Gettysburg Address. #NPC
 Wow, sounds serious. #Player
