@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
 
     public void ToMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 
@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
 
         }
         blackBackgrondFade.alpha = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         yield return null;
 
 
