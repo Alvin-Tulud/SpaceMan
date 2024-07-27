@@ -12,6 +12,7 @@ TagManager:
   - DialogueName
   - DialogueImage
   - Inventory
+  - FadeOut
   layers:
   - Default
   - TransparentFX

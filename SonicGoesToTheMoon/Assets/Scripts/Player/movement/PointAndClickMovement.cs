@@ -8,6 +8,8 @@ public class PointAndClickMovement : MonoBehaviour
     public AIDestinationSetter destinationSystem;
     private GameObject destinationPointer;
     private bool canMove;
+    [SerializeField] CanvasGroup blackBackgrondFade;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +19,11 @@ public class PointAndClickMovement : MonoBehaviour
 
         canMove = true;
         Sounds.StartMusic("event:/Music/Main");
+        blackBackgrondFade.gameObject.SetActive(true);
+        StartCoroutine(FadeIn());
     }
 
-   
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canMove)
@@ -41,5 +45,18 @@ public class PointAndClickMovement : MonoBehaviour
     {
         //Debug.Log(canMove);
         this.canMove = canMove;
+    }
+
+    IEnumerator FadeIn()
+    {
+        float timeElapsed = 0;
+        float lerpTime = .5f;
+        while (timeElapsed < lerpTime)
+        {
+            blackBackgrondFade.alpha = Mathf.Lerp(1, 0, timeElapsed / lerpTime);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+
+        }
     }
 }

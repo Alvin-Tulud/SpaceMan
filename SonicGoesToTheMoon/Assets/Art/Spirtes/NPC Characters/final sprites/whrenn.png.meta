@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4bf7f04c50b69964cbbbf9977c03e9d7
+guid: 7695d5881d4690b4195401faa8f9bc40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7797460114789565060
-    second: Untitled611_20240727022805_0
-  - first:
-      213: -3273821214130536650
-    second: Untitled611_20240727022805_1
+      213: -3475427413336775929
+    second: whrenn_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -86,7 +83,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -98,7 +95,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled611_20240727022805_0
+      name: whrenn_0
       rect:
         serializedVersion: 2
-        x: 669
-        y: 1130
-        width: 11
-        height: 13
+        x: 145
+        y: 2
+        width: 251
+        height: 518
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,29 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4820f4469a4263c60800000000000000
-      internalID: 7797460114789565060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled611_20240727022805_1
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 69
-        width: 1098
-        height: 1054
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63f7c9183fc0192d0800000000000000
-      internalID: -3273821214130536650
+      spriteID: 70328616e2dc4cfc0800000000000000
+      internalID: -3475427413336775929
       vertices: []
       indices: 
       edges: []
@@ -164,9 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Untitled611_20240727022805_0: 7797460114789565060
-      Untitled611_20240727022805_1: -3273821214130536650
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
