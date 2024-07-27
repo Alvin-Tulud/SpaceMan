@@ -99,7 +99,6 @@ public class Questhandler : MonoBehaviour
     {
         foreach(DoDialogue dialogue in dialogueList)
         {
-            Debug.Log(dialogue.transform.name);
             //check for taking
             if (dialogue.transform.name.CompareTo("Nobara Kugisaki") == 0 && dialogue.getHasTalked()  && takeFromPlayer("watermelon"))
             {
