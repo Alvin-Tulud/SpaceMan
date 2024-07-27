@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class rocketTakeOff : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class rocketTakeOff : MonoBehaviour
             else
             {
                 SpaceAnim.SetActive(true);
+
+                StartCoroutine(screenWait());
             }
         }
     }
@@ -48,5 +51,15 @@ public class rocketTakeOff : MonoBehaviour
     {
         canTakeOff = true;
         GetComponent<ParticleSystem>().Play();
+
+        GameObject.Find("PlayerGraphic").SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public IEnumerator screenWait()
+    {
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(0);
     }
 }
