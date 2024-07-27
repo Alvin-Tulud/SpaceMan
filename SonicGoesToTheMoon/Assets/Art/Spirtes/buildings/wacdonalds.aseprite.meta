@@ -121,8 +121,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: wacdonalds
     originalName: 
-    pivot: {x: 0.52537316, y: -0.036649216}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
