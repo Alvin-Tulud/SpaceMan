@@ -135,11 +135,20 @@ public class DoDialogue : MonoBehaviour
 
     public void setHasReq(bool hasReq) { this.hasReq = hasReq; }
 
+    public bool getHasReq() { return hasReq; }
+
     public void setHasBothReq(bool hasReq) { this.hasBothReq = hasReq; }
+
+    public bool getHasBothReq() { return hasBothReq; }
 
     public bool getIsPlaying() { return isPlaying; }
 
     public void setIsPlaying(bool isPlaying) { this.isPlaying = isPlaying; }
+
+    public void setHasTalked(bool hasTalked) { this.hasTalked = hasTalked; }
+
+    public bool getHasTalked() { return hasTalked; }
+
 
     //public bool getDoOnce(bool doOnce) { return doOnce; }
 
