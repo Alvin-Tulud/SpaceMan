@@ -1389,6 +1389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 838551937144328415, guid: 1a14438510ec05348a05072da048f358, type: 3}
+      propertyPath: m_Name
+      value: Eric Haaland
+      objectReference: {fileID: 0}
     - target: {fileID: 1169201608868998863, guid: 1a14438510ec05348a05072da048f358, type: 3}
       propertyPath: SpaceAnim
       value: 
