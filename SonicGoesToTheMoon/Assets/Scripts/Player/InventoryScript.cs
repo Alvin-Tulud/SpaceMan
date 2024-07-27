@@ -17,7 +17,7 @@ public class InventoryScript : MonoBehaviour
         //it starts disabled in the scene so, you know,
         invEnabled = false;
 
-        inventory = GameObject.FindWithTag("Inventory");
+        inventory = GameObject.FindWithTag("Inventory").transform.GetChild(0).gameObject;
         inventory.SetActive(false);
     }
 

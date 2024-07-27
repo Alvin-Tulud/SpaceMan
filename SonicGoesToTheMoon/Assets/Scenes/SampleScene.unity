@@ -747,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 43286666568656852, guid: 665c522116850d7408567e764295edfc, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
+      objectReference: {fileID: 0}
     - target: {fileID: 1681745391259502418, guid: 665c522116850d7408567e764295edfc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -829,7 +833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502335696742963675, guid: 665c522116850d7408567e764295edfc, type: 3}
       propertyPath: m_TagString
-      value: Inventory
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,12 +5,38 @@ using UnityEngine;
 public class Questhandler : MonoBehaviour
 {
 
-    /* Haaland: Football
-     * Nobara: Nothing
-     * Homelander: Trophy
+    /* Dict <string, gameobj>
+     * Dict Giving
+     * Haaland: none
+     * Nobara: rocket part bottom
+     * Homelander: gettysburg address
+     * Gandalf: rocket part top
+     * Lincoln: watermelon
+     * Gator: none
+     * Adachi: none
+     * Captain Sparkles: none
      * 
+     * Dict <string, gameobj>
+     * Dict Recieving
+     * Haaland: none
+     * Nobara: watermelon
+     * Homelander: none
+     * Gandalf: none
+     * Lincoln: gettysburg address
+     * Gator: none
+     * Adachi: none
+     * Captain Sparkles: none
      * 
-     * 
+     * Dict <string, DoDialogue>
+     * Dict DoDialogue
+     * Haaland: DoDialogue
+     * Nobara: DoDialogue
+     * Homelander: DoDialogue
+     * Gandalf: DoDialogue
+     * Lincoln: DoDialogue
+     * Gator: DoDialogue
+     * Adachi: DoDialogue
+     * Captain Sparkles: DoDialogue
      */
 
     //Dict. for giving away items to npc's
@@ -48,9 +74,9 @@ public class Questhandler : MonoBehaviour
      * 
      *  *****IF GANDALF:
      *  If script.getHasReq(true): 
-     *  Gandalf gives 2nd item
+     *  Gandalf recieves 2nd item
      *  Else:
-     *  Gandalf gives 1st item
+     *  Gandalf recieves 1st item
      * 
      */
 
