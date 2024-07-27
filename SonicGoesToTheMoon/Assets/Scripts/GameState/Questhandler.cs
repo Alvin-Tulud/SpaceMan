@@ -156,6 +156,7 @@ public class Questhandler : MonoBehaviour
         //Only give if the NPC has something to give
         if (givingToPlayer.ContainsKey(name) == true)
         {
+            Debug.Log("give: " + name);
             string itemToGive = givingToPlayer[name];
             addItem(itemToGive);
         }
