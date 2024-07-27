@@ -376,6 +376,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1439747022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5840278809370897349, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
+  m_PrefabInstance: {fileID: 4836938072344817108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1439747023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439747022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70474d0a49fdd1745b8fea21c4ed9363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1585184264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1180,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5840278809370897349, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1439747023}
   m_SourcePrefab: {fileID: 100100000, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
 --- !u!1001 &4866339136123488395
 PrefabInstance:
@@ -1176,6 +1196,10 @@ PrefabInstance:
     - target: {fileID: 43286666568656852, guid: 665c522116850d7408567e764295edfc, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 43286666568656852, guid: 665c522116850d7408567e764295edfc, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1295693006737092761, guid: 665c522116850d7408567e764295edfc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1307,7 +1331,11 @@ PrefabInstance:
       objectReference: {fileID: 7577569481465865205, guid: dc83069e33a2279448e83ead7032ed2c, type: 3}
     - target: {fileID: 6502335696742963675, guid: 665c522116850d7408567e764295edfc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502335696742963675, guid: 665c522116850d7408567e764295edfc, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 6523560933613820575, guid: 665c522116850d7408567e764295edfc, type: 3}
       propertyPath: m_Sprite
