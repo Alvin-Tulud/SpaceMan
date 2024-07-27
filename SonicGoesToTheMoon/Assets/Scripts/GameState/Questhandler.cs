@@ -48,6 +48,20 @@ public class Questhandler : MonoBehaviour
 
     //Dictionary<>
 
+    //Inventory stuff (Sorry for putting everything in 1 script. I did what I had to do)
+
+    //Inventory slots, accessible in order to change their sprites
+    public GameObject slot1;
+    public GameObject slot2;
+    public GameObject slot3;
+    public GameObject slot4;
+
+    //The sprites the inventory slots will change to
+    public Sprite rocketBottom;
+    public Sprite rocketTop;
+    public Sprite gettysburg;
+    public Sprite watermelon;
+    public Sprite emptySlot;
 
     // Start is called before the first frame update
     void Start()
@@ -95,4 +109,19 @@ public class Questhandler : MonoBehaviour
      * 
      * If true, double check for gandalf
      */
+
+
+
+
+    //Function for adding item to inv.
+    
+    //Function for removing item to inv.
+    //(both of these call render function)
+
+    //Function for re-rendering inv.
+    //for[i 0-3]:
+    //if [inv.size-1 >= i]:
+    //  update sprite
+    //else
+    //  empty sprite
 }
