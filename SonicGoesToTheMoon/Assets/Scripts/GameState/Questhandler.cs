@@ -107,7 +107,7 @@ public class Questhandler : MonoBehaviour
             }
             else if (dialogue.transform.name.CompareTo("Lincoln") == 0 && dialogue.getHasTalked() && takeFromPlayer("Lincoln"))
             {
-                Debug.Log("Lincoln");
+                //Debug.Log("Lincoln");
                 dialogue.setHasReq(true);
             }
 
@@ -156,8 +156,9 @@ public class Questhandler : MonoBehaviour
         //Only give if the NPC has something to give
         if (givingToPlayer.ContainsKey(name) == true)
         {
-            Debug.Log("give: " + name);
+            //Debug.Log("give from: " + name);
             string itemToGive = givingToPlayer[name];
+            Debug.Log(name + "IS GIVING " + itemToGive);
             addItem(itemToGive);
         }
     }
@@ -180,14 +181,14 @@ public class Questhandler : MonoBehaviour
     //Function for NPC taking the player's item. Takes an item based on who the NPC is.
     public bool takeFromPlayer(string name)
     {
-        Debug.Log("im boutta take... FROM " + name);
+        //Debug.Log("im boutta take... FROM " + name);
         //Only take if the NPC has something to take
         if (takingFromPlayer.ContainsKey(name))
         {
             string itemToTake = takingFromPlayer[name];
             removeItem(itemToTake);
 
-            Debug.Log("I just took " + itemToTake);
+            //Debug.Log("I just took " + itemToTake);
             return true;
         }
 
@@ -218,6 +219,7 @@ public class Questhandler : MonoBehaviour
     public void addItem(string item)
     {
         playerInv.Add(item);
+        Debug.Log("SUCCESSFULLY added " + item);
         renderInventory();
     }
 

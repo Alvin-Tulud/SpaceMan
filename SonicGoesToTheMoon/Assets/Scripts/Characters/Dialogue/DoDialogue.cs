@@ -131,6 +131,7 @@ public class DoDialogue : MonoBehaviour
 
                 if (hasReq && hasTalked && !hasGiven)
                 {
+                    Debug.Log("IM BOUTTA GIVE " + gameObject.name);
                     Questhandler q = FindAnyObjectByType<Questhandler>();
                     //q.takeFromPlayer(gameObject.name);
                     q.giveToPlayer(gameObject.name);
