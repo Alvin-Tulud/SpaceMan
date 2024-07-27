@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      astronautwalk3_0: 5321529883563857997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
