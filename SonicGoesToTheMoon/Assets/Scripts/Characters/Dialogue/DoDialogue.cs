@@ -156,6 +156,8 @@ public class DoDialogue : MonoBehaviour
 
     public void setHasTalked(bool hasTalked) { this.hasTalked = hasTalked; }
 
+    public bool getNeutral() { return neutral; }
+
     public bool getHasTalked() { return hasTalked; }
 
 
