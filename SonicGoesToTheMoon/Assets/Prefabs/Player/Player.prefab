@@ -319,9 +319,10 @@ MonoBehaviour:
   rocketBottom: {fileID: 1952170389943966698, guid: 813b4e0a731ab28408d9334aa3d047ee, type: 3}
   rocketTop: {fileID: 9172039925137130809, guid: 813b4e0a731ab28408d9334aa3d047ee, type: 3}
   gettysburg: {fileID: 2337225774582341286, guid: c801f72cb3a1a8846b4d67f9370a21e9, type: 3}
-  watermelon: {fileID: 7797460114789565060, guid: 4bf7f04c50b69964cbbbf9977c03e9d7, type: 3}
+  watermelon: {fileID: -3273821214130536650, guid: 4bf7f04c50b69964cbbbf9977c03e9d7, type: 3}
   emptySlot: {fileID: 7577569481465865205, guid: dc83069e33a2279448e83ead7032ed2c, type: 3}
   dialogueList:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -359,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43510e4d444d64445bdb4d78103a1ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 4366183351024453972}
 --- !u!1 &5861266217968252503
 GameObject:
   m_ObjectHideFlags: 0

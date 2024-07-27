@@ -1272,10 +1272,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6846006423523894202, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
-      propertyPath: pickNextWaypointDist
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 7299426908753510610, guid: 3de7895999e126e45b32da09145ff2e4, type: 3}
       propertyPath: click
       value: 
