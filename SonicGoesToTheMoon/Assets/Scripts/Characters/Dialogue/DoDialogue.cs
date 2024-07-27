@@ -83,11 +83,17 @@ public class DoDialogue : MonoBehaviour
                     Questhandler q = new Questhandler();
                     q.takeFromPlayer(gameObject.name);
                     q.giveToPlayer(gameObject.name);
-                    
                 }
                 else
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
+
+                    //If homelander, he has to give you the address
+                    if(gameObject.name == "Homelander")
+                    {
+                        Questhandler q = new Questhandler();
+                        q.giveToPlayer(gameObject.name);
+                    }
                 }
             }
 
