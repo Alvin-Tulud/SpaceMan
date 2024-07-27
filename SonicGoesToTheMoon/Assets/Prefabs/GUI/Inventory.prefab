@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 4656217238107917864}
   m_Layer: 5
   m_Name: InvBackground
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
