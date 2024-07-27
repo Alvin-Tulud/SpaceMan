@@ -120,9 +120,20 @@ public class Questhandler : MonoBehaviour
 
 
     //Function for adding item to inv.
-    
+    //THE ONLY VALID INPUT STRINGS ARE rocketBottom | rocketTop | gettysburg | watermelon
+    public void addItem(string item)
+    {
+        playerInv.Add(item);
+        renderInventory();
+    }
+
     //Function for removing item to inv.
-    //(both of these call render function)
+    //THE ONLY VALID INPUT STRINGS ARE rocketBottom | rocketTop | gettysburg | watermelon
+    public void removeItem(string item)
+    {
+        playerInv.Remove(item);
+        renderInventory();
+    }
 
     //Function for re-rendering inv.
     //for[i 0-3]:
