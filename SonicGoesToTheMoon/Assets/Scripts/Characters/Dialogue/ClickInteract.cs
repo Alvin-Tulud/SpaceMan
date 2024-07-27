@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -61,6 +62,8 @@ public class ClickInteract : MonoBehaviour
     private void toggleUIMove(bool can)
     {
         FindAnyObjectByType<PointAndClickMovement>().setCanMove(can);
+
+        FindAnyObjectByType<AIPath>().canMove = can;
 
         GameObject.FindWithTag("DialogueBox").transform.GetChild(0).gameObject.SetActive(!can);
 
