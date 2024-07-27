@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class rocketTakeOff : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class rocketTakeOff : MonoBehaviour
     bool notcalledyet;
 
     public GameObject SpaceAnim;
+    Image RocketImg;
     DoDialogue dialogue;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,10 @@ public class rocketTakeOff : MonoBehaviour
         SpaceAnim.SetActive(false);
 
         dialogue = GameObject.Find("Rocket").GetComponent<DoDialogue>();
+
+        RocketImg = GetComponent<Image>();
+
+        RocketImg.enabled = false;
     }
 
     // Update is called once per frame
@@ -62,10 +68,11 @@ public class rocketTakeOff : MonoBehaviour
     public void takeOff()
     {
         canTakeOff = true;
+        RocketImg.enabled = true;
+
         GetComponent<ParticleSystem>().Play();
 
         GameObject.Find("PlayerGraphic").SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public IEnumerator screenWait()
