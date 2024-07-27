@@ -12,10 +12,15 @@ public class ClickInteract : MonoBehaviour
     public string charAudio = "event:/SFX/UI/dialogeStart";
 
     Vector2 mousePos;
+
+    bool stopspam;
+    int maxtime;
+    int currtime;
     // Start is called before the first frame update
     void Start()
     {
-
+        stopspam = false;
+        currtime = 0;
     }
 
     // Update is called once per frame
@@ -24,6 +29,21 @@ public class ClickInteract : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         col = GetComponent<Collider2D>();
         dialogue = transform.parent.parent.GetComponent<DoDialogue>();
+    }
+
+    private void FixedUpdate()
+    {
+        if (stopspam)
+        {
+            GetComponent<Button>().interactable = false;
+            currtime++;
+
+            if (currtime >= maxtime)
+            {
+                stopspam = false;
+                GetComponent<Button>().interactable = true;
+            }
+        }
     }
 
     public IEnumerator interactDone()
@@ -40,7 +60,8 @@ public class ClickInteract : MonoBehaviour
 
         if (GetComponent<Button>() != null)
         {
-            StartCoroutine(stopspam());
+            currtime = 0;
+            stopspam = true;
         }
     }
 
@@ -74,12 +95,5 @@ public class ClickInteract : MonoBehaviour
         {
             GetComponent<Button>().interactable = can;
         }
-    }
-
-    public IEnumerator stopspam()
-    {
-        GetComponent<Button>().interactable = false;
-        yield return new WaitForSeconds(0.25f);
-        GetComponent<Button>().interactable = true;
     }
 }
