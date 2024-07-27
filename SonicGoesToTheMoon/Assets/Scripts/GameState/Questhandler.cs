@@ -183,7 +183,7 @@ public class Questhandler : MonoBehaviour
         if(takingFromPlayer.ContainsKey(name)==true)
         {
             string itemToTake = takingFromPlayer[name];
-            addItem(itemToTake);
+            removeItem(itemToTake);
 
             return true;
         }
