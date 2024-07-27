@@ -48,7 +48,7 @@ public class rocketTakeOff : MonoBehaviour
             if (currTime <= endTime)
             {
                 currTime++;
-                Vector3.Lerp(initPos, endPos, currTime / endTime);
+                transform.position = Vector3.Lerp(initPos, endPos, currTime / endTime);
             }
             else
             {
