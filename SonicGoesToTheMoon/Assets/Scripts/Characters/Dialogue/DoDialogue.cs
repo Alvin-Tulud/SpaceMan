@@ -72,28 +72,14 @@ public class DoDialogue : MonoBehaviour
                 else if (hasBothReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 2);
-                    //give them item(this guy);
-                    //recieve
                 }
                 else if (hasReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
-                    
-                    //Gives the item to the player
-                    Questhandler q = FindAnyObjectByType<Questhandler>();
-                    //q.takeFromPlayer(gameObject.name);
-                    q.giveToPlayer(gameObject.name);
                 }
                 else
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 0);
-
-                    //If homelander, he has to give you the address
-                    if(gameObject.name == "Homelander")
-                    {
-                        Questhandler q = FindAnyObjectByType<Questhandler>();
-                        q.giveToPlayer(gameObject.name);
-                    }
                 }
             }
 
