@@ -102,13 +102,13 @@ public class Questhandler : MonoBehaviour
             DoDialogue d = dialogueList[i];
 
             //check for taking
-            if (d.transform.name.CompareTo("Nobara Kugisaki") == 0 && d.getHasTalked() && takeFromPlayer("Nobara Kugisaki") && d.transform.name.CompareTo("Lincoln") == 0 && d.getNeutral())
+            if (d.transform.name.CompareTo("Nobara Kugisaki") == 0 && d.getHasTalked() && d.getIsPlaying() && GameObject.Find("Lincoln").GetComponent<DoDialogue>().getNeutral() && takeFromPlayer("Nobara Kugisaki"))
             {
                 Debug.Log("Nobara");
                 d.setHasReq(true);
                 dialogueList.Remove(d);
             }
-            else if (d.transform.name.CompareTo("Lincoln") == 0 && d.getHasTalked() && takeFromPlayer("Lincoln") && GameObject.Find("Homelander").GetComponent<DoDialogue>().getNeutral())
+            else if (d.transform.name.CompareTo("Lincoln") == 0 && d.getHasTalked() && d.getIsPlaying() && GameObject.Find("Homelander").GetComponent<DoDialogue>().getNeutral() && takeFromPlayer("Lincoln"))
             {
                 Debug.Log("Lincoln");
                 d.setHasReq(true);
