@@ -60,21 +60,25 @@ public class DoDialogue : MonoBehaviour
             //text logic
             Debug.Log("play: " + transform.name);
             isPlaying = true;
+            
             if (needInteract)
             {
+                //check if has req();
+
                 if (neutral)
                 {
                     var returnValue = dialogue.variablesState["doneReq"] = true;
+                }
+                else if (hasBothReq && hasTalked)
+                {
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 2);
                 }
                 else if (hasReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
                     //this guy = get parent of the script
                     //give me item(this guy);
-                }
-                else if (hasBothReq && hasTalked)
-                {
-                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 2);
+                    
                 }
                 else
                 {

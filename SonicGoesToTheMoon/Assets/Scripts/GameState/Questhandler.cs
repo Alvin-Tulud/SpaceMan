@@ -32,4 +32,11 @@ public class Questhandler : MonoBehaviour
     {
         
     }
+
+    //give me item(this guy);
+    //Function for recieving items
+
+    //Function for giving items
+
+    //Function for checking quest req.
 }
