@@ -14,7 +14,7 @@ public class ClickInteract : MonoBehaviour
     Vector2 mousePos;
 
     bool stopspam;
-    int maxtime;
+    const int maxtime = 200;
     int currtime;
     // Start is called before the first frame update
     void Start()
