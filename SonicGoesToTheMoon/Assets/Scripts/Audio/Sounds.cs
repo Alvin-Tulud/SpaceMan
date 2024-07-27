@@ -19,9 +19,15 @@ public class Sounds : ScriptableObject
         musicRef = RuntimeManager.CreateInstance(path);
         musicRef.start();
     }
-
     public static void StopMusic()
     {
         musicRef.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        musicRef.release();
     }
+
+    public static void RocketTakeoff()
+    {
+        RuntimeManager.PlayOneShot("event:/SFX/Characters/rocket");
+    }
+    
 }
