@@ -22,6 +22,7 @@ public class DoDialogue : MonoBehaviour
 
     public bool needInteract;
     public bool hasReq;
+    public bool hasBothReq;
     private bool hasTalked;
     private bool neutral;
     private bool isPlaying;
@@ -68,6 +69,10 @@ public class DoDialogue : MonoBehaviour
                 else if (hasReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
+                }
+                else if (hasBothReq && hasTalked)
+                {
+                    var returnValue = dialogue.EvaluateFunction("hasRequirement", 2);
                 }
                 else
                 {
@@ -129,6 +134,8 @@ public class DoDialogue : MonoBehaviour
     }
 
     public void setHasReq(bool hasReq) { this.hasReq = hasReq; }
+
+    public void setHasBothReq(bool hasReq) { this.hasBothReq = hasReq; }
 
     public bool getIsPlaying() { return isPlaying; }
 

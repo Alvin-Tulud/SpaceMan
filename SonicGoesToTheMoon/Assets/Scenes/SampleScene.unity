@@ -1040,15 +1040,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2745369206361358994, guid: 1a14438510ec05348a05072da048f358, type: 3}
       propertyPath: m_Color.b
-      value: 0.15690637
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2745369206361358994, guid: 1a14438510ec05348a05072da048f358, type: 3}
       propertyPath: m_Color.g
-      value: 0.15690637
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2745369206361358994, guid: 1a14438510ec05348a05072da048f358, type: 3}
       propertyPath: m_Color.r
-      value: 0.8113208
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2745369206361358994, guid: 1a14438510ec05348a05072da048f358, type: 3}
       propertyPath: m_SpriteSortPoint
