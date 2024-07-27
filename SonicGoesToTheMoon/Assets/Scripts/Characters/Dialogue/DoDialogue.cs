@@ -72,6 +72,8 @@ public class DoDialogue : MonoBehaviour
                 else if (hasBothReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 2);
+                    //give them item(this guy);
+                    //recieve
                 }
                 else if (hasReq && hasTalked)
                 {
