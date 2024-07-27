@@ -127,14 +127,7 @@ public class DoDialogue : MonoBehaviour
                 doOnce = false;
                 dialogueCounter = 0;
 
-
-                //If homelander, he has to give you the address
-                if (gameObject.name == "Homelander")
-                {
-                    Questhandler q = FindAnyObjectByType<Questhandler>();
-                    q.giveToPlayer(gameObject.name);
-                }
-                else if (hasReq && hasTalked)
+                if (hasReq && hasTalked)
                 {
                     Questhandler q = FindAnyObjectByType<Questhandler>();
                     //q.takeFromPlayer(gameObject.name);
