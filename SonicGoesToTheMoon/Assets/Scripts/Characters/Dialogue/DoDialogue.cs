@@ -78,8 +78,11 @@ public class DoDialogue : MonoBehaviour
                 else if (hasReq && hasTalked)
                 {
                     var returnValue = dialogue.EvaluateFunction("hasRequirement", 1);
-                    //this guy = get parent of the script
-                    //give me item(this guy);
+                    
+                    //Gives the item to the player
+                    Questhandler q = new Questhandler();
+                    q.takeFromPlayer(gameObject.name);
+                    q.giveToPlayer(gameObject.name);
                     
                 }
                 else

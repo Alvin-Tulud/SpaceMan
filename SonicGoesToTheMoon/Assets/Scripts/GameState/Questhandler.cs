@@ -67,12 +67,29 @@ public class Questhandler : MonoBehaviour
     public Sprite watermelon;
     public Sprite emptySlot;
 
+    Dictionary<string, string> givingToPlayer;
+    Dictionary<string, string> takingFromPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         //Create the dictionaries
 
+        //dictionary for npc's giving items to the player
+        givingToPlayer = new Dictionary<string, string>()
+        {
+            {"Nobara Kugisaki", "rocketBottom"},
+            {"Homelander", "gettysburg"},
+            {"Gandalf", "rocketTop"},
+            {"Lincoln", "watermelon"}
+        };
 
+        //dictionary for npc's taking items from player
+        takingFromPlayer = new Dictionary<string, string>()
+        {
+            {"Nobara Kugisaki", "watermelon"},
+            {"Lincoln", "gettysburg"}
+        };
     }
 
     // Update is called once per frame
@@ -81,9 +98,17 @@ public class Questhandler : MonoBehaviour
         
     }
 
-    //give me item(this guy);
-    //Function for recieving items
+    //Function for NPC giving the player items. Gives them item based on the player.
     //pass in transform.name (string)
+    public void giveToPlayer(string name)
+    {
+        //Only give if the NPC has something to give
+        if (givingToPlayer.ContainsKey(name) == true)
+        {
+            string itemToGive = givingToPlayer[name];
+            addItem(itemToGive);
+        }
+    }
 
     //Function for giving items
     /* 1. Look up character in dictionary
@@ -96,9 +121,21 @@ public class Questhandler : MonoBehaviour
      *  If script.getHasReq(true): 
      *  Gandalf recieves 2nd item
      *  Else:
-     *  Gandalf recieves 1st item
+     *  Gandalf recieves 1st item?
      * 
      */
+
+    //Function for NPC taking the player's item. Takes an item based on who the NPC is.
+    public void takeFromPlayer(string name)
+    {
+        //Only take if the NPC has something to take
+        if(takingFromPlayer.ContainsKey(name)==true)
+        {
+            string itemToTake = takingFromPlayer[name];
+            addItem(itemToTake);
+        }
+        
+    }
 
     //Function for checking quest req.
     //pass in script
