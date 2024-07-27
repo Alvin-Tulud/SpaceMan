@@ -415,8 +415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkAsset: {fileID: 4900000, guid: 00f70e73fd03e7f4faf745d3c5e80de9, type: 3}
-  NpcImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
+  NpcImage: {fileID: 21300000, guid: 7695d5881d4690b4195401faa8f9bc40, type: 3}
+  PlayerImage: {fileID: 2831676589248891045, guid: 2fc03b40cdc4cf1438c8420e8bf3b99f, type: 3}
   needInteract: 0
   hasReq: 0
   hasBothReq: 0
