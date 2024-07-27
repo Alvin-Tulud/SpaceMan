@@ -189,10 +189,14 @@ public class Questhandler : MonoBehaviour
         if (takingFromPlayer.ContainsKey(name))
         {
             string itemToTake = takingFromPlayer[name];
-            removeItem(itemToTake);
+            if(playerInv.Contains(itemToTake))
+            {
+                removeItem(itemToTake);
 
-            Debug.Log("I just took " + itemToTake);
-            return true;
+                Debug.Log("I just took " + itemToTake);
+                return true;
+            }
+            
         }
 
         return false;
