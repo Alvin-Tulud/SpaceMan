@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 653903751
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ecfaf878908cba944874a5fc5679e19b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9789fd3d1cea8d84094df5e54231b046, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   PlayerImage: {fileID: -5620055989646091708, guid: dc389c1ec868b6e489adbf1ee09e5ac2, type: 3}
   needInteract: 1
   hasReq: 0
+  hasBothReq: 0
 --- !u!1 &8209283669523035834
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cdd1091231a354588b62dbb6856eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charAudio: event:/SFX/UI/dialogeStart
 --- !u!61 &9035282834458750369
 BoxCollider2D:
   m_ObjectHideFlags: 0
