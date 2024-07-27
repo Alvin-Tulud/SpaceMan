@@ -146,7 +146,7 @@ public class Questhandler : MonoBehaviour
                     dialogue.setHasBothReq(true);
                 }
             }
-            else if (dialogue.transform.name.CompareTo("Gandalf") == 0 && playerInv.Contains("rocketTop") && playerInv.Contains("rocketBottom"))
+            else if (dialogue.transform.name.CompareTo("Rocket") == 0 && playerInv.Contains("rocketTop") && playerInv.Contains("rocketBottom"))
             {
                 dialogue.setHasReq(true);
             }
