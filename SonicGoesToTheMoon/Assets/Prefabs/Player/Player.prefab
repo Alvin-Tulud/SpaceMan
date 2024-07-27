@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 6400766660838880944}
   - component: {fileID: 8378721451202707830}
   - component: {fileID: 4327530918921871294}
+  - component: {fileID: 6917673705471076318}
+  - component: {fileID: 3241736953061103364}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -221,7 +223,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0.6
-  pickNextWaypointDist: 0.5
+  pickNextWaypointDist: 0.6
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -254,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destinationSystem: {fileID: 6400766660838880944}
+  blackBackgrondFade: {fileID: 0}
 --- !u!50 &4327530918921871294
 Rigidbody2D:
   serializedVersion: 4
@@ -281,3 +284,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6917673705471076318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840278809370897349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70474d0a49fdd1745b8fea21c4ed9363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3241736953061103364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840278809370897349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0cf8a5d20f0bc43ab8b2b902c067c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInv: []
+  slot1: {fileID: 0}
+  slot2: {fileID: 0}
+  slot3: {fileID: 0}
+  slot4: {fileID: 0}
+  rocketBottom: {fileID: 1952170389943966698, guid: 813b4e0a731ab28408d9334aa3d047ee, type: 3}
+  rocketTop: {fileID: 9172039925137130809, guid: 813b4e0a731ab28408d9334aa3d047ee, type: 3}
+  gettysburg: {fileID: 2337225774582341286, guid: c801f72cb3a1a8846b4d67f9370a21e9, type: 3}
+  watermelon: {fileID: 7797460114789565060, guid: 4bf7f04c50b69964cbbbf9977c03e9d7, type: 3}
+  emptySlot: {fileID: 7577569481465865205, guid: dc83069e33a2279448e83ead7032ed2c, type: 3}
